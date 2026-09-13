@@ -1,0 +1,581 @@
+[
+  {
+    "id": "autonomous-racing",
+    "number": "01",
+    "category": "Autonomous systems",
+    "title": "A learned policy. A closed control loop.",
+    "name": "ICRA autonomous racing / AutoDRIVE",
+    "subtitle": "A complete learning-and-control pipeline for the ICRA 2025 RoboRacer Sim Racing League.",
+    "year": "2025–2026",
+    "access": "Public implementation",
+    "role": "Controller design, training, integration & submission",
+    "featured": true,
+    "kind": "race",
+    "repo": "https://github.com/kaustubhkr/f1tenth-rl-controller",
+    "bullets": [
+      "Designed LiDAR observation contracts and coupled steering–throttle action spaces.",
+      "Built the ROS 2 ↔ Gymnasium training loop, reward experiments and checkpoint evaluation.",
+      "Extended the system with ONNX export, TensorRT build tooling and Triton serving adapters."
+    ],
+    "tags": [
+      "Closed-loop RL",
+      "Observation engineering",
+      "Policy inference"
+    ],
+    "lead": "I independently built and submitted the reinforcement-learning racing controller. The entry placed third in qualification at the ICRA 2025 RoboRacer Sim Racing League, with an 81.32-second run, zero collisions, and an 8.03-second best lap.",
+    "flow": [
+      "LiDAR + simulator feedback",
+      "Observation / action contract",
+      "Learned policy",
+      "Steering + throttle",
+      "Lap / collision feedback"
+    ],
+    "sections": [
+      [
+        "The agent–environment boundary",
+        [
+          "Wrote the ROS 2 environment bridge around LiDAR, collision and lap feedback, with steering and throttle command publishers.",
+          "Competition-era code includes 180 LiDAR features and 25 discrete steering–throttle combinations, with lower-throttle turning actions and higher-throttle straight actions.",
+          "Maintained additional observation and factored-action experiments as the training interface evolved."
+        ]
+      ],
+      [
+        "The training system",
+        [
+          "Experimented with collision penalties, survival terms, throttle incentives and lap feedback. The reward defines what the agent is encouraged to do; lap outcomes establish what it actually did.",
+          "Built checkpoint resume, evaluation and training variants around Stable-Baselines3 PPO.",
+          "The accompanying manuscript investigates compact LiDAR policies, observation aggregation and reward shaping. I am its first author; it is not published."
+        ]
+      ],
+      [
+        "The inference continuation",
+        [
+          "Added ONNX policy export, TensorRT engine-building tools, inference benchmarking utilities, and Triton configuration/client paths.",
+          "These are later extensions, added in 2026. The competition controller and the later inference tooling have separate histories."
+        ]
+      ]
+    ],
+    "noteTitle": "The control contract shapes the policy.",
+    "note": "Compressing a scan changes which geometry the agent can observe. Discretising steering and throttle changes the manoeuvres it can express. Rewarding throttle commands changes the optimisation target without directly measuring speed. I treated these choices as part of the controller, alongside the network and optimiser.",
+    "boundary": "Simulation competition. Third in qualification; the entry later finished 14th in the final time-attack race. The two rounds evaluate different runs and tracks.",
+    "links": [
+      [
+        "Official competition results",
+        "https://autodrive-ecosystem.github.io/competitions/roboracer-sim-racing-icra-2025/#results"
+      ]
+    ]
+  },
+  {
+    "id": "reinforcement-learning",
+    "number": "02",
+    "category": "Learning & world models",
+    "title": "Learning dynamics. Controlling machines.",
+    "name": "RLx-Core / Reinforcement Learning Toolkit",
+    "subtitle": "A reinforcement-learning programme spanning trust-region optimisation, ensemble actor–critic learning, learned dynamics, world-model research and industrial policy execution.",
+    "year": "2024–2026",
+    "access": "Public implementation",
+    "role": "Learning-system architecture, algorithm implementation & model-based experiments",
+    "featured": true,
+    "kind": "rl",
+    "repo": "https://github.com/kaustubhkr/reinforcement-learning-toolkit",
+    "bullets": [
+      "TRPO from the update rule: damped KL Hessian–vector products, conjugate gradients, backtracking line search and rollback.",
+      "REDQ with 10 critics, random 2-critic targets, UTD 20 and learned entropy temperature.",
+      "Model-based experiments: JAX/Flax probabilistic dynamics, stochastic policy modules and an Isaac Sim Franka manipulation scene.",
+      "World-model research spanning PETS, PlaNet, Dreamer and MuZero; industrial runtime design with explicit policy contracts and handover modes."
+    ],
+    "tags": [
+      "Learned dynamics",
+      "Trust-region optimisation",
+      "World models",
+      "Runtime contracts"
+    ],
+    "lead": "I built RLx-Core to work through the full learning system: how a policy changes, how experience is reused, how dynamics can be learned, and how a learned controller could take responsibility for a machine. The work spans implemented RL algorithms, model-based experiments and a longer-term world-model and industrial-runtime programme.",
+    "flow": [
+      "Experience",
+      "Return / target estimation",
+      "Policy + value objectives",
+      "Gradient / trust-region update",
+      "Evaluation"
+    ],
+    "sections": [
+      [
+        "Model-based learning & simulation",
+        [
+          "Wrote JAX/Flax dynamics and stochastic-policy modules. The dynamics network returns separate mean and log-variance predictions; the policy uses a tanh-squashed Gaussian with clipped log standard deviation and explicit random-key handling.",
+          "Set up the MBPO architecture around separate real and model replay paths, rollout-length configurations and ablation scripts. The integrated ensemble training and model-rollout loop remain experimental work.",
+          "Built a Franka manipulation scene in Isaac Sim with USD assets, articulated joints, rigid-body props, collision and friction configuration, surface-gripper control and joint-state input."
+        ]
+      ],
+      [
+        "Second-order policy optimisation",
+        [
+          "Implemented the TRPO policy-ratio surrogate, flattened autograd gradients and conjugate-gradient solving with residual-based termination.",
+          "Computed damped KL Hessian–vector products through higher-order autograd, avoiding explicit construction of a dense Hessian.",
+          "Scaled the candidate step to a KL budget, backtracked for surrogate improvement, and restored the previous parameters when no step passed.",
+          "Implemented PPO with Gaussian action log probabilities, minibatched clipped ratios, entropy regularisation, value regression and gradient clipping."
+        ]
+      ],
+      [
+        "Ensemble value estimation & experience reuse",
+        [
+          "Implemented REDQ with 10 critics, a random 2-critic target subset and a configured update-to-data ratio of 20.",
+          "Used the subset minimum for target estimation, the ensemble mean in the policy objective, learned entropy temperature and soft target updates.",
+          "Built TD3, SAC and value-learning implementations spanning Double/Dueling DQN, prioritised replay and Rainbow, alongside tabular planning, Dyna-Q and prioritised sweeping."
+        ]
+      ],
+      [
+        "From learned dynamics to industrial world models",
+        [
+          "The RLx-Core and RLTK roadmaps extend model-based control through MBPO, PETS and PlaNet into Dreamer V1/V2/V3, MuZero and SimPLe.",
+          "The industrial research questions include long-horizon manipulation, partially observed machine state, failure prediction, experience reuse and adaptation across tasks.",
+          "The wider programme includes offline and imitation learning, hierarchical skills, multi-agent coordination, sequence-model policies, robust sim-to-real transfer and risk-sensitive control.",
+          "The deployment design binds a policy to observation normalisation, actuator bounds, model identity, timing assumptions and Shadow, Residual, Primary or Cooperative operating modes."
+        ]
+      ]
+    ],
+    "noteTitle": "Prediction becomes useful when it changes a control decision.",
+    "note": "A world model needs to retain the dynamics that matter for action: contact, timing, hidden state and how errors compound over a rollout. That connects the research back to controller design. The policy needs a useful imagined future; the runtime still needs an action it can execute, a deadline it can meet and a defined response when its assumptions fail.",
+    "boundary": "Implemented policy and value-learning families; experimental model-based modules and simulation work; world-model and industrial deployment research. The interactive architecture shows the implementation and research layers explicitly.",
+    "links": [
+      [
+        "Model-based experiments",
+        "https://github.com/kaustubhkr/reinforcement-learning-toolkit/tree/main/phase_06_model_based/1_MBPO"
+      ]
+    ],
+    "sectionLabels": [
+      "Experimental implementation",
+      "Implementation",
+      "Implementation",
+      "Research direction"
+    ]
+  },
+  {
+    "id": "control-runtime",
+    "number": "03",
+    "category": "Control engineering",
+    "title": "Control, down to the tick.",
+    "name": "C++ control runtime",
+    "subtitle": "Controller lifecycle, actuator constraints and internal-state consistency in a C++20 execution core.",
+    "year": "2025–2026",
+    "access": "Public implementation",
+    "role": "Control-library design & implementation",
+    "featured": true,
+    "kind": "control",
+    "repo": "https://github.com/kaustubhkr/industrial-control-toolkit",
+    "bullets": [
+      "Preallocated controller state, explicit lifecycle and fixed-period update contracts.",
+      "Ordered saturation → rate → jerk constraints, with anti-windup fed by the constrained command.",
+      "Gain scheduling, Tustin-discretised derivative filtering, bumpless transfer and watchdog fallback."
+    ],
+    "tags": [
+      "C++20",
+      "Actuator constraints",
+      "Deterministic control"
+    ],
+    "lead": "I built a control core in which the control law, actuator constraints and controller state update are connected explicitly. The implementation includes PID and IMC-PID components, a common lifecycle, runtime health and evidence recording.",
+    "flow": [
+      "Control law",
+      "Actuator saturation",
+      "Rate constraint",
+      "Jerk constraint",
+      "Anti-windup feedback"
+    ],
+    "sections": [
+      [
+        "Execution architecture",
+        [
+          "Allocated working buffers from a memory arena during initialisation and reused them on the update path.",
+          "Defined controller dimensions, start/stop/reset lifecycle, measurement-validity masks, fixed-tick timing and runtime health.",
+          "Preserved the unconstrained and constrained commands separately so each limiting stage can report its effect."
+        ]
+      ],
+      [
+        "Control and constraints",
+        [
+          "Implemented setpoint weighting, feedforward bias and a filtered derivative with Tustin discretisation.",
+          "Added gain scheduling over configured breakpoints, with interpolation of gains and weights.",
+          "Composed saturation, slew-rate and jerk constraints before anti-windup, plus bumpless state alignment and watchdog/fallback components."
+        ]
+      ],
+      [
+        "Inspectability",
+        [
+          "Included checks for derivative kick, bumpless transfer, saturation, rate and jerk behaviour, scheduling and deterministic execution.",
+          "Built JSONL and MCAP evidence-recorder paths, a FlatBuffers schema, hash/round-trip checks and example traces.",
+          "Kept runtime health attached to the output: deadline misses, clamp magnitudes, limiting hits and anti-windup correction magnitude."
+        ]
+      ]
+    ],
+    "noteTitle": "The integrator must see the command that survives the constraints.",
+    "note": "A controller can request far more than an actuator is allowed to deliver. Updating its internal state as though the raw request was executed creates a mismatch. The core preserves both values and feeds their difference into the anti-windup path after saturation, rate and jerk limiting.",
+    "boundary": "The implemented controller family is PID/IMC-PID. Broader controllers described in the repository roadmap are ongoing work.",
+    "links": []
+  },
+  {
+    "id": "multi-robot-runtime",
+    "number": "04",
+    "category": "Industrial robotics",
+    "title": "One world. Multiple robots.",
+    "name": "Multi-robot autonomy runtime",
+    "subtitle": "A ROS 2 runtime connecting simulated industrial robots, localisation, mission state, command arbitration and repeatable recording.",
+    "year": "2025–2026",
+    "access": "Private implementation",
+    "role": "AviRob · system architecture & implementation",
+    "featured": true,
+    "kind": "runtime",
+    "bullets": [
+      "Shared occupancy map with independently namespaced AMCL and verified map–odom–base chains.",
+      "Dual-LiDAR merging, frame-authority conflict detection and stale-publisher expiry.",
+      "Freshness-gated velocity arbitration, deliberate restart logic and deterministic scenario capture."
+    ],
+    "tags": [
+      "ROS 2 Jazzy",
+      "AMCL / Nav2",
+      "State machines"
+    ],
+    "lead": "I built the runtime-side infrastructure for a multi-robot industrial simulation: the coordinate frames, sensor streams, mission logic and machine states needed to produce repeatable behaviour and analysable recordings.",
+    "flow": [
+      "Simulation + clock",
+      "Localisation + TF",
+      "Mission / Nav2 intent",
+      "Interlocks + motion gate",
+      "Recorded runtime episode"
+    ],
+    "sections": [
+      [
+        "Localisation and frame ownership",
+        [
+          "Configured one shared map with three separately namespaced AMCL instances and per-robot initial-pose bootstrapping.",
+          "Merged front and rear laser scans for the applicable robot and provided configurable sensor-frame alignment.",
+          "Implemented TF chain validation and publisher-conflict tracking, including expiry of stale sources after restarts.",
+          "Added world-to-map calibration tools so initial poses and geometry share a declared reference frame."
+        ]
+      ],
+      [
+        "Authority over motion",
+        [
+          "Separated raw motion intent from the final command publisher in the evidence-mode runtime.",
+          "Implemented deterministic command-gate logic for stale stop, mode, interlock and warning inputs.",
+          "Represented active stops, deliberate-restart requirements, charger contacts, load state, doors, portals and prestart warnings as explicit inputs to arbitration."
+        ]
+      ],
+      [
+        "Repeatable physical-system experiments",
+        [
+          "Built mission and fork-adapter components, deterministic scenario models and a scenario runner.",
+          "Recorded rosbag2 episodes with artifact bundles and declared signal contracts.",
+          "Checked topics, frames, publisher ownership, timestamps and freshness at the interface between simulation and the runtime."
+        ]
+      ]
+    ],
+    "noteTitle": "A coordinate transform also has an owner.",
+    "note": "Two publishers can produce individually plausible transforms while making the combined system inconsistent. The runtime tracks the active sources for monitored frame pairs, expires stale publishers, and reports competing authority. The same ownership discipline applies to final velocity commands.",
+    "boundary": "A simulation-development runtime. Protective-device and PLC models here are development components, not certified machine-safety functions.",
+    "links": []
+  },
+  {
+    "id": "machine-evidence",
+    "number": "05",
+    "category": "AviRob / industrial systems",
+    "title": "Reconstruct what happened.",
+    "name": "Machine evidence compiler",
+    "subtitle": "Heterogeneous industrial recordings compiled into canonical, replayable machine timelines with provenance.",
+    "year": "2025–2026",
+    "access": "Private implementation",
+    "role": "Founder · architecture, implementation & industrial discovery",
+    "featured": true,
+    "kind": "evidence",
+    "bullets": [
+      "Raw-source preservation, protocol framing and canonical machine-state contracts.",
+      "Transport gap, duplication, reordering and reset tracking across recorded sources.",
+      "Time alignment, source authority, provenance and deterministic bundle generation."
+    ],
+    "tags": [
+      "Temporal data systems",
+      "Protocol integration",
+      "Provenance"
+    ],
+    "lead": "I built the recording and compilation system beneath AviRob’s industrial evidence work. It converts fragmented robot, scanner and controller records into a timeline whose values retain their source, timing and interpretation.",
+    "flow": [
+      "Raw industrial records",
+      "Framing + source mapping",
+      "Timing + quality",
+      "Canonical timeline",
+      "Replayable run bundle"
+    ],
+    "sections": [
+      [
+        "Source ingestion",
+        [
+          "Implemented file intake, raw recording storage and queued ingest/compile workflows.",
+          "Built source-pack and mapping contracts for robot context, scanners, controller diagnostics and reference measurements.",
+          "Included file-log, MCAP/rosbag2 and baseline MQTT/OPC UA intake paths, plus scanner-specific decoding and framing components."
+        ]
+      ],
+      [
+        "Temporal integrity",
+        [
+          "Tracked sequence gaps, duplicate events, reordering, resets, incomplete fragments and stale data.",
+          "Preserved timing basis and alignment quality rather than treating every received timestamp as equivalent.",
+          "Retained source class, confidence, derivation and provenance alongside canonical observed values."
+        ]
+      ],
+      [
+        "Compilation and replay",
+        [
+          "Compiled run bundles with canonical timelines, events, quality summaries and reference-channel assessments.",
+          "Separated raw recording from interpretation so an episode can be revisited as mappings evolve.",
+          "Built integrity/quarantine handling, stable export surfaces and operational reports for downstream analysis."
+        ]
+      ]
+    ],
+    "noteTitle": "A value without its origin can be the wrong evidence.",
+    "note": "A fleet report, a diagnostic channel and an independent physical measurement can all describe motion while supporting different conclusions. The compiler keeps the source semantics and transformation history attached to the value so downstream analysis can decide what the observation is sufficient to establish.",
+    "boundary": "Selected technical description of private work. The compiler produces canonical evidence bundles; behavioural verdicts belong to the downstream engine.",
+    "links": []
+  },
+  {
+    "id": "verification-engine",
+    "number": "06",
+    "category": "AviRob / geometry & verification",
+    "title": "Make the conclusion traceable.",
+    "name": "Geometric verification engine",
+    "subtitle": "Time-aligned machine behaviour evaluated against site geometry and explicitly declared evidence requirements.",
+    "year": "2025–2026",
+    "access": "Private implementation",
+    "role": "Founder · analysis-engine design & implementation",
+    "featured": true,
+    "kind": "verification",
+    "bullets": [
+      "Polygon-based zone membership, directional clearance and nearest-structure analysis.",
+      "Evidence-window validators for speed, restart discipline, warnings and interlocks.",
+      "Deterministic PASS / FAIL / NOT_VERIFIABLE findings tied to original observations."
+    ],
+    "tags": [
+      "Computational geometry",
+      "Temporal logic",
+      "Evidence semantics"
+    ],
+    "lead": "I built the downstream engine that joins machine timelines with versioned site geometry and robot specifications, then evaluates specific behaviours with traceable findings.",
+    "flow": [
+      "Canonical run",
+      "Aligned analysis ticks",
+      "Site / robot geometry",
+      "Evidence-dependent validators",
+      "Finding + source window"
+    ],
+    "sections": [
+      [
+        "Temporal and geometric context",
+        [
+          "Constructed analysis timelines with bounded hold-last behaviour, stale-gap handling and event attachment.",
+          "Derived motion, standstill and transition context while retaining timing and evidence quality.",
+          "Implemented deterministic polygon-based zone membership, direction-of-travel context, directional clearances and nearest-structure distance.",
+          "Bound geometry to declared site-model and robot-specification versions."
+        ]
+      ],
+      [
+        "Behavioural checks",
+        [
+          "Implemented validator dependencies and central evidence gating.",
+          "Built checks for muting speed, zone-dependent speed, restart discipline, prestart/motion warnings, charging interlocks and load-secure motion prevention.",
+          "Assembled findings with evidence windows, reason codes, severity and provenance pointers."
+        ]
+      ],
+      [
+        "Missing evidence has a defined result",
+        [
+          "Distinguished directly observed state from inferred state in the validator inputs.",
+          "Carried missingness, staleness and integrity status through the analysis rather than manufacturing a successful result.",
+          "Used PASS, FAIL and NOT_VERIFIABLE to keep the conclusion consistent with the available evidence."
+        ]
+      ]
+    ],
+    "noteTitle": "Geometry and timing change the meaning of the same speed.",
+    "note": "A velocity sample is only one input. The relevant zone, the direction of travel, the active machine state and the freshness of each observation determine whether a specific behaviour can be evaluated. The engine composes these contexts and retains the original source window for review.",
+    "boundary": "Engineering evidence analysis. It does not confer certification or replace an independent machine-safety assessment.",
+    "links": [
+      [
+        "Related ROSCon India talk",
+        "https://www.youtube.com/watch?v=8RZy6ztm5Wg"
+      ]
+    ]
+  },
+  {
+    "id": "visual-driving",
+    "number": "07",
+    "category": "Robot learning",
+    "title": "Demonstration to interaction.",
+    "name": "Visual autonomous driving",
+    "subtitle": "Visual representation reuse and continuous-control training in CARLA, with an explicit simulator integration.",
+    "year": "2024–2026",
+    "access": "Public implementation",
+    "role": "Data pipeline, model integration & training system",
+    "featured": false,
+    "kind": "vision",
+    "repo": "https://github.com/kaustubhkr/Self_Driving_Car",
+    "bullets": [
+      "Built expert-data collection, visual imitation learning and continuous-control training paths.",
+      "Reused imitation-checkpoint features, fused with vehicle state, inside an actor–critic pipeline.",
+      "Implemented simulator environments, checkpoint recovery, monitoring and multi-environment training utilities."
+    ],
+    "tags": [
+      "Representation transfer",
+      "Imitation learning",
+      "CARLA"
+    ],
+    "lead": "I built the pipeline around learning to drive from visual observations: collecting expert behaviour, predicting controls, and reusing learned features inside an interactive reinforcement-learning setup.",
+    "flow": [
+      "Expert observations",
+      "Visual imitation model",
+      "Transferred visual features + state",
+      "Actor–critic training",
+      "CARLA interaction"
+    ],
+    "sections": [
+      [
+        "Observation to control",
+        [
+          "Adapted the visual model to five input channels while retaining pretrained RGB weights for the first three.",
+          "Used separate steering, throttle and brake heads for the imitation path.",
+          "Built the CARLA environment interface and the observation/action plumbing for interactive training."
+        ]
+      ],
+      [
+        "Representation reuse",
+        [
+          "Loaded the imitation checkpoint into a custom feature extractor and removed the final control-regression heads.",
+          "Combined the extracted visual representation with state inputs through a learned projection.",
+          "Integrated the extractor with Stable-Baselines3 SAC and separate policy/critic networks."
+        ]
+      ],
+      [
+        "The experiment infrastructure",
+        [
+          "Implemented checkpoint discovery and resume logic, evaluation and monitoring utilities.",
+          "Added multi-environment training paths and tools for recovering interrupted experiments.",
+          "Kept collected demonstrations, imitation models and interactive-learning experiments in the same development trail."
+        ]
+      ]
+    ],
+    "noteTitle": "Transfer the representation; inspect the control problem again.",
+    "note": "A representation learned from expert examples supplies a useful starting point, but interactive training changes the observations the agent encounters. The pipeline makes the feature-transfer boundary explicit so the demonstration model, state inputs and actor–critic objective can be inspected separately.",
+    "boundary": "CARLA simulation work. My separate physical golf-cart contribution involved RL and classical local planning; that implementation remains private.",
+    "links": []
+  },
+  {
+    "id": "personal-os",
+    "number": "08",
+    "category": "Native systems / local inference",
+    "title": "A memory system I can run.",
+    "name": "Personal OS",
+    "subtitle": "Native macOS audio capture, local speech inference, speaker-aware memory and dictation.",
+    "year": "2026",
+    "access": "Private implementation",
+    "role": "Native application & local inference architecture",
+    "featured": false,
+    "kind": "audio",
+    "bullets": [
+      "Separate AudioQueue dictation and ScreenCaptureKit + microphone meeting paths.",
+      "20 ms PCM input, rolling lossless audio, provisional decoding and an independent final pass.",
+      "Bounded local model workers, GPU request serialization and SQLite-backed personal memory."
+    ],
+    "tags": [
+      "Swift / macOS",
+      "Audio systems",
+      "Local inference"
+    ],
+    "lead": "I built a native macOS system for capturing and retrieving my own working context, with local speech processing and explicit control over the audio and inference lifecycle.",
+    "flow": [
+      "Native audio capture",
+      "Lossless chunks",
+      "Local speech + speaker processing",
+      "Transcript + memory",
+      "Retrieval / dictation"
+    ],
+    "sections": [
+      [
+        "Capture and inference lifecycle",
+        [
+          "Implemented separate paths for AudioQueue dictation and ScreenCaptureKit system-audio plus microphone capture.",
+          "Used 20 ms PCM callbacks and rolling lossless 16 kHz mono audio files for dictation.",
+          "Built provisional phrase decoding followed by an independent quality pass over the original audio."
+        ]
+      ],
+      [
+        "Resource and failure handling",
+        [
+          "Bound the number of loaded model workers and serialized GPU inference requests.",
+          "Kept microphone startup independent of remote-backend discovery and model loading.",
+          "Preserved provisional text when finalisation fails, with explicit microphone-open, first-audio, first-text and stop-to-final timings."
+        ]
+      ],
+      [
+        "Personal memory",
+        [
+          "Built local multilingual transcription and speaker-aware processing around existing speech models.",
+          "Added SQLite-backed memory, retrieval, correction handling and optional backend-routing contracts.",
+          "Made capture, transcription, storage and action boundaries visible in the native application."
+        ]
+      ]
+    ],
+    "noteTitle": "Latency is a sequence of boundaries.",
+    "note": "The time before useful text appears includes opening the input device, receiving the first real samples, accumulating context and scheduling inference. I separated those stages so a slow device open does not disappear inside a single transcription-time number.",
+    "boundary": "Actively developed native application. Hardware-dependent capture and cross-application actions have their own device-validation requirements.",
+    "links": []
+  },
+  {
+    "id": "private-compute",
+    "number": "09",
+    "category": "Infrastructure experiment",
+    "title": "Access with an expiry.",
+    "name": "Private compute workspaces",
+    "subtitle": "A host and session-control layer around privately owned compute and existing remote-display systems.",
+    "year": "2026",
+    "access": "Private implementation",
+    "role": "Control-plane prototype & access workflow",
+    "featured": false,
+    "kind": "compute",
+    "bullets": [
+      "Host registration, heartbeat metrics and time-limited browser invite sessions.",
+      "Explicit session revocation with a readable event audit trail.",
+      "Policy wrapper around existing streaming endpoints, with file transfer denied by default."
+    ],
+    "tags": [
+      "Session lifecycle",
+      "Access control",
+      "Host agents"
+    ],
+    "lead": "I built a validation prototype for giving people bounded access to an existing workstation, with ownership, session expiry and revocation represented in the control plane.",
+    "flow": [
+      "Registered workstation",
+      "Expiring invite",
+      "Session connection",
+      "Audit events",
+      "Expiry / revocation"
+    ],
+    "sections": [
+      [
+        "Control-plane mechanics",
+        [
+          "Registered hosts and ingested heartbeat metrics through an optional host agent.",
+          "Created expiring invitation sessions with a browser entry point and existing stream endpoint.",
+          "Implemented connect, disconnect and revoke transitions with event history."
+        ]
+      ],
+      [
+        "Access policy",
+        [
+          "Denied file transfer by default at the workflow-policy level.",
+          "Kept the lifetime of access explicit instead of distributing permanent machine access.",
+          "Provided administration surfaces for hosts, sessions, policies and audit events."
+        ]
+      ]
+    ],
+    "noteTitle": "Session authority is its own system.",
+    "note": "A remote-display stream solves one part of remote compute. This prototype explores the surrounding lifecycle: which host is available, who has an invitation, when that invitation expires, and what happens after revocation.",
+    "boundary": "A validation MVP around an existing streaming system. It does not implement a new display protocol or claim enterprise security qualification.",
+    "links": []
+  }
+]

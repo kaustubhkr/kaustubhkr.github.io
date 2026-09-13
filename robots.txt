@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kaustubhkr.github.io/sitemap.xml

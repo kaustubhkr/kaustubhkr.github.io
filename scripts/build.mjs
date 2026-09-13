@@ -1,7 +1,7 @@
 import { mkdirSync, copyFileSync, existsSync, writeFileSync, readdirSync, statSync, unlinkSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { renderSite } from './render.mjs';
-export const publicAssets=['racing-loop.mp4','racing-poster.jpg','icra-qualification.mp4','early-robot.jpeg','early-pid.mp4','wro-test.mp4','wro-test-poster.jpg','wro-robot.jpeg','roscon-stage.jpg','control-response.svg','control-cascade.svg','control-latency.svg'];
+export const publicAssets=['racing-loop.mp4','racing-poster.jpg','icra-qualification.mp4','early-robot.jpeg','early-pid.mp4','wro-demo-silent-125.mp4','wro-demo-poster.jpg','wro-robot.jpeg','roscon-stage.jpg','control-response.svg','control-cascade.svg','control-latency.svg'];
 const evidenceFiles=['pid-benchmark.csv','pid-position.csv','pid-cascade.csv'];
 export function build(){
   const root=resolve(import.meta.dirname,'..');

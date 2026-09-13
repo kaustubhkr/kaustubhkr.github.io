@@ -1,6 +1,6 @@
 # Kaustubh Krishna / Portfolio
 
-Static founder portfolio with nine engineering case studies, an Industry 6.0 direction page, biography and original project footage. The homepage leads with a second Physical AI company in stealth and ICRA autonomous racing. The RLx-Core page includes interactive world-model, policy-optimisation and runtime-contract views.
+Static founder portfolio with seven independent flagship robotics systems, including physical golf-cart autonomy, three archived experiments, a technical thesis, biography and original footage. The homepage leads with a second Physical AI company in stealth and ICRA autonomous racing. The RLx-Core page leads with probabilistic dynamics and world-model research, followed by interactive policy-optimisation and runtime-contract views. Control measurements are visualised from the original public CSVs.
 
 ## Local review
 
@@ -21,6 +21,8 @@ Node 22 or newer. No npm dependencies are needed. Fonts load from Google Fonts w
 
 - `content/projects.json`: case-study copy, technical bullets, public implementation links and project context.
 - `scripts/render.mjs`: homepage, project templates, biography and direction HTML.
+- `scripts/evidence.mjs`: measured results, method notes and artifact links.
+- `scripts/plot-evidence.py`: reproducible control charts from `content/evidence/` (requires matplotlib).
 - `scripts/engineering.mjs`: project architecture diagrams, world-model research map and technical inspectors.
 - `styles.css`: responsive design.
 - `app.js`: accessible video controls and keyboard-operable technical tabs.
@@ -32,7 +34,7 @@ The generated HTML is committed as ordinary static pages. Edit the source files 
 
 The current company is described only as a stealth Physical AI startup. Selected private projects have technical descriptions without repository links or source. Industry 6.0 and autonomous factories are the direction being built toward. The racing placement is third in qualification, with the later final-round result explained in the project.
 
-The MPCC experience is included in the technical profile. Its exact project association remains to be supplied by the owner before expanding it into a separate case study.
+The owner confirmed MPCC comparison, modified PPO/SAC and multi-head attention work in the private local racing and golf-cart codebases. The golf-cart deployment is a separate physical-vehicle case study; ICRA timings belong only to the simulator competition.
 
 ## Publishing and public URLs
 

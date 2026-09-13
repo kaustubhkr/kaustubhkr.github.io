@@ -30,7 +30,7 @@ for(const [file,html] of documents){
     localLinks++;
   }
 }
-assert.equal(htmlFiles.length,15,'Unexpected route count');
+assert.equal(htmlFiles.length,17,'Unexpected route count');
 const assets=readdirSync(root+'/assets');
 for(const name of assets) assert(publicAssets.includes(name),`Unexpected public asset: ${name}`);
 for(const name of publicAssets) assert(assets.includes(name),`Missing public asset: ${name}`);
@@ -47,3 +47,9 @@ const rlPage=documents.get(resolve(root,'projects/reinforcement-learning.html'))
 assert(rlPage.includes('data-default="world-models"'),'World-model view must lead the learning architecture');
 for(const name of ['Dreamer','PlaNet','PETS','MuZero','Hessian','Residual','Cooperative'])assert(rlPage.includes(name),`Missing technical coverage: ${name}`);
 console.log(`PASS: ${htmlFiles.length} pages, ${localLinks} local references, ${assets.length} public assets, private-source boundaries and required portfolio details.`);
+
+const racingProject=JSON.parse(readFileSync(resolve(root,'../content/projects.json'),'utf8')).find(p=>p.id==='autonomous-racing');
+assert(!racingProject.repo,'Private racing source link remains');
+assert(!homepage.includes('Private compute workspaces'),'Peripheral project remains on homepage');
+assert(!/trpo-training|redq-training/.test(rlPage),'Retired training plots remain on RL page');
+assert(documents.get(resolve(root,'projects/control-runtime.html')).includes('control-latency.svg'),'Control measurements missing');

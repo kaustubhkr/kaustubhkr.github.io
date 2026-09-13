@@ -5,24 +5,23 @@
     "category": "Autonomous systems",
     "title": "A learned policy. A closed control loop.",
     "name": "ICRA autonomous racing / AutoDRIVE",
-    "subtitle": "A complete learning-and-control pipeline for the ICRA 2025 RoboRacer Sim Racing League.",
+    "subtitle": "Independent ICRA AutoDRIVE racing work spanning MPCC comparison, modified PPO/SAC, attention encoding and ROS 2 controller integration.",
     "year": "2025–2026",
-    "access": "Public implementation",
-    "role": "Controller design, training, integration & submission",
+    "access": "Private implementation",
+    "role": "Sole builder · controller, training, integration & submission",
     "featured": true,
     "kind": "race",
-    "repo": "https://github.com/kaustubhkr/f1tenth-rl-controller",
     "bullets": [
-      "Designed LiDAR observation contracts and coupled steering–throttle action spaces.",
-      "Built the ROS 2 ↔ Gymnasium training loop, reward experiments and checkpoint evaluation.",
-      "Extended the system with ONNX export, TensorRT build tooling and Triton serving adapters."
+      "Compared MPCC with modified PPO and SAC controllers; built a multi-head attention encoder for autonomous racing.",
+      "Integrated policy training, controller evaluation and ROS 2 execution; extended inference through ONNX, TensorRT and Triton.",
+      "Outperformed entries from Autonomous Racing at Penn and the Autoware Foundation in ICRA 2025 qualification."
     ],
     "tags": [
-      "Closed-loop RL",
-      "Observation engineering",
-      "Policy inference"
+      "MPCC / PPO / SAC",
+      "Multi-head attention",
+      "ROS 2 execution"
     ],
-    "lead": "I independently built and submitted the reinforcement-learning racing controller. The entry placed third in qualification at the ICRA 2025 RoboRacer Sim Racing League, with an 81.32-second run, zero collisions, and an 8.03-second best lap.",
+    "lead": "I built the ICRA AutoDRIVE racing controller independently, including MPCC comparison, modified PPO and SAC controllers, a multi-head attention encoder, the ROS 2 environment bridge and the training/evaluation pipeline. The submitted entry placed third in qualification with an 81.32-second run, zero collisions and an 8.03-second best lap.",
     "flow": [
       "LiDAR + simulator feedback",
       "Observation / action contract",
@@ -32,10 +31,18 @@
     ],
     "sections": [
       [
-        "The agent–environment boundary",
+        "Controller comparison & learned representation",
+        [
+          "Compared Model Predictive Contouring Control (MPCC) with modified PPO and SAC controllers in the same autonomous-racing project.",
+          "Built a multi-head attention encoder as part of the learned-control work.",
+          "Developed the controller variants and encoder in a private local codebase. The retained PPO baseline uses a separate, explicit observation/action contract."
+        ]
+      ],
+      [
+        "The retained PPO baseline",
         [
           "Wrote the ROS 2 environment bridge around LiDAR, collision and lap feedback, with steering and throttle command publishers.",
-          "Competition-era code includes 180 LiDAR features and 25 discrete steering–throttle combinations, with lower-throttle turning actions and higher-throttle straight actions.",
+          "The retained baseline includes 180 LiDAR features and 25 discrete steering–throttle combinations, with lower-throttle turning actions and higher-throttle straight actions.",
           "Maintained additional observation and factored-action experiments as the training interface evolved."
         ]
       ],
@@ -50,8 +57,7 @@
       [
         "The inference continuation",
         [
-          "Added ONNX policy export, TensorRT engine-building tools, inference benchmarking utilities, and Triton configuration/client paths.",
-          "These are later extensions, added in 2026. The competition controller and the later inference tooling have separate histories."
+          "In 2026, added ONNX export, TensorRT engine-build tooling and Triton serving adapters. These extensions came after the 2025 competition."
         ]
       ]
     ],
@@ -66,12 +72,62 @@
     ]
   },
   {
-    "id": "reinforcement-learning",
+    "id": "golf-cart",
     "number": "02",
+    "category": "Autonomous systems / physical vehicle",
+    "title": "Learned control. On a real vehicle.",
+    "name": "Physical golf-cart autonomy",
+    "subtitle": "A physical golf-cart autonomy stack combining MPCC, modified PPO/SAC, multi-head attention, an RL adapter and industrial-control integration.",
+    "year": "CARLA → physical vehicle",
+    "access": "Private implementation",
+    "role": "Controller development, RL adapter & vehicle deployment",
+    "featured": true,
+    "kind": "vehicle",
+    "bullets": [
+      "Compared MPCC with modified PPO and SAC; built a multi-head attention encoder for autonomous-driving work.",
+      "Deployed on a physical golf cart with an RL adapter and industrial-control integration."
+    ],
+    "tags": [
+      "MPCC / PPO / SAC",
+      "Physical deployment",
+      "Control integration"
+    ],
+    "lead": "I built and deployed an autonomous-driving system on a physical golf cart. The work combined MPCC comparison, modified PPO and SAC, a multi-head attention encoder, and an RL adapter integrated with the vehicle’s industrial controls.",
+    "flow": [
+      "Driving observations",
+      "Attention encoder / controller",
+      "RL adapter",
+      "Industrial-control integration",
+      "Physical golf cart"
+    ],
+    "sections": [
+      [
+        "Controllers and representation",
+        [
+          "Compared MPCC with modified PPO/SAC in the autonomous-driving controller stack.",
+          "Built a multi-head attention encoder as part of the learned-control work."
+        ]
+      ],
+      [
+        "From policy to vehicle",
+        [
+          "Built the reinforcement-learning adapter and industrial-control integration for the physical golf cart.",
+          "Carried the autonomous-driving work into real-vehicle execution; the implementation is private and stored locally."
+        ]
+      ]
+    ],
+    "noteTitle": "The adapter is part of the controller.",
+    "note": "A trained policy needs a path into the physical control system. My work included that integration: the RL adapter, industrial controls and deployment on the vehicle, alongside the learning and classical-control methods.",
+    "boundary": "An independent autonomous-vehicle project, developed through CARLA experiments and deployed on a physical golf cart. The implementation is private.",
+    "links": []
+  },
+  {
+    "id": "reinforcement-learning",
+    "number": "03",
     "category": "Learning & world models",
-    "title": "Learning dynamics. Controlling machines.",
+    "title": "World models. Policy optimisation.",
     "name": "RLx-Core / Reinforcement Learning Toolkit",
-    "subtitle": "A reinforcement-learning programme spanning trust-region optimisation, ensemble actor–critic learning, learned dynamics, world-model research and industrial policy execution.",
+    "subtitle": "JAX/Flax probabilistic dynamics, MBPO experiments and world-model research, alongside PPO, SAC and second-order policy optimisation.",
     "year": "2024–2026",
     "access": "Public implementation",
     "role": "Learning-system architecture, algorithm implementation & model-based experiments",
@@ -79,18 +135,17 @@
     "kind": "rl",
     "repo": "https://github.com/kaustubhkr/reinforcement-learning-toolkit",
     "bullets": [
-      "TRPO from the update rule: damped KL Hessian–vector products, conjugate gradients, backtracking line search and rollback.",
-      "REDQ with 10 critics, random 2-critic targets, UTD 20 and learned entropy temperature.",
-      "Model-based experiments: JAX/Flax probabilistic dynamics, stochastic policy modules and an Isaac Sim Franka manipulation scene.",
-      "World-model research spanning PETS, PlaNet, Dreamer and MuZero; industrial runtime design with explicit policy contracts and handover modes."
+      "JAX/Flax probabilistic dynamics, MBPO experiments and latent world-model research.",
+      "PPO clipped-surrogate updates, SAC twin critics and entropy tuning, TRPO Hessian–vector solvers.",
+      "JAX/Flax dynamics modules, Isaac Sim manipulation and a world-model research programme."
     ],
     "tags": [
-      "Learned dynamics",
-      "Trust-region optimisation",
       "World models",
-      "Runtime contracts"
+      "PPO / SAC",
+      "Probabilistic dynamics",
+      "Trust-region optimisation"
     ],
-    "lead": "I built RLx-Core to work through the full learning system: how a policy changes, how experience is reused, how dynamics can be learned, and how a learned controller could take responsibility for a machine. The work spans implemented RL algorithms, model-based experiments and a longer-term world-model and industrial-runtime programme.",
+    "lead": "RLx-Core brings together probabilistic dynamics, model-based learning experiments and world-model research with PPO, SAC, TRPO and REDQ implementations. I built JAX/Flax dynamics and policy modules, an Isaac Sim manipulation scene, and the update rules and experiment infrastructure for learned control.",
     "flow": [
       "Experience",
       "Return / target estimation",
@@ -152,7 +207,7 @@
   },
   {
     "id": "control-runtime",
-    "number": "03",
+    "number": "04",
     "category": "Control engineering",
     "title": "Control, down to the tick.",
     "name": "C++ control runtime",
@@ -164,9 +219,9 @@
     "kind": "control",
     "repo": "https://github.com/kaustubhkr/industrial-control-toolkit",
     "bullets": [
-      "Preallocated controller state, explicit lifecycle and fixed-period update contracts.",
-      "Ordered saturation → rate → jerk constraints, with anti-windup fed by the constrained command.",
-      "Gain scheduling, Tustin-discretised derivative filtering, bumpless transfer and watchdog fallback."
+      "C++20 controller lifecycle with arena-backed state, bumpless transfer and explicit actuator limits.",
+      "Controller-update timing across 1–64 channels, with p50, p95, p99 and p99.9 percentiles recorded in CSV.",
+      "Position and cascade response traces: 1,000 recorded samples each at a 1 ms model step."
     ],
     "tags": [
       "C++20",
@@ -214,7 +269,7 @@
   },
   {
     "id": "multi-robot-runtime",
-    "number": "04",
+    "number": "05",
     "category": "Industrial robotics",
     "title": "One world. Multiple robots.",
     "name": "Multi-robot autonomy runtime",
@@ -276,7 +331,7 @@
   },
   {
     "id": "machine-evidence",
-    "number": "05",
+    "number": "06",
     "category": "AviRob / industrial systems",
     "title": "Reconstruct what happened.",
     "name": "Machine evidence compiler",
@@ -287,13 +342,13 @@
     "featured": true,
     "kind": "evidence",
     "bullets": [
-      "Raw-source preservation, protocol framing and canonical machine-state contracts.",
-      "Transport gap, duplication, reordering and reset tracking across recorded sources.",
+      "VDA 5050/MQTT, OPC UA, SICK scan3 UDP, picoScan REST and MCAP/rosbag2 ingestion.",
+      "Datagram reassembly, clock alignment and provenance-preserving compilation into replayable machine timelines.",
       "Time alignment, source authority, provenance and deterministic bundle generation."
     ],
     "tags": [
-      "Temporal data systems",
-      "Protocol integration",
+      "Protocol decoding",
+      "Temporal integrity",
       "Provenance"
     ],
     "lead": "I built the recording and compilation system beneath AviRob’s industrial evidence work. It converts fragmented robot, scanner and controller records into a timeline whose values retain their source, timing and interpretation.",
@@ -310,7 +365,7 @@
         [
           "Implemented file intake, raw recording storage and queued ingest/compile workflows.",
           "Built source-pack and mapping contracts for robot context, scanners, controller diagnostics and reference measurements.",
-          "Included file-log, MCAP/rosbag2 and baseline MQTT/OPC UA intake paths, plus scanner-specific decoding and framing components."
+          "Built VDA 5050/MQTT and read-only OPC UA intake, SICK scan3 UDP datagram parsing and reassembly, picoScan REST capture, Flexi Soft gateway inputs, and MCAP/rosbag2 file ingestion."
         ]
       ],
       [
@@ -337,7 +392,7 @@
   },
   {
     "id": "verification-engine",
-    "number": "06",
+    "number": "07",
     "category": "AviRob / geometry & verification",
     "title": "Make the conclusion traceable.",
     "name": "Geometric verification engine",
@@ -348,13 +403,13 @@
     "featured": true,
     "kind": "verification",
     "bullets": [
-      "Polygon-based zone membership, directional clearance and nearest-structure analysis.",
-      "Evidence-window validators for speed, restart discipline, warnings and interlocks.",
+      "Point-in-polygon queries, direction-of-travel clearance and nearest-structure distance against versioned site geometry.",
+      "Bounded hold-last alignment and evidence-gated validators for muting speed, restart logic, warnings and interlocks.",
       "Deterministic PASS / FAIL / NOT_VERIFIABLE findings tied to original observations."
     ],
     "tags": [
       "Computational geometry",
-      "Temporal logic",
+      "Temporal validation",
       "Evidence semantics"
     ],
     "lead": "I built the downstream engine that joins machine timelines with versioned site geometry and robot specifications, then evaluates specific behaviours with traceable findings.",
@@ -404,7 +459,7 @@
   },
   {
     "id": "visual-driving",
-    "number": "07",
+    "number": "08",
     "category": "Robot learning",
     "title": "Demonstration to interaction.",
     "name": "Visual autonomous driving",
@@ -457,16 +512,25 @@
           "Added multi-environment training paths and tools for recovering interrupted experiments.",
           "Kept collected demonstrations, imitation models and interactive-learning experiments in the same development trail."
         ]
+      ],
+      [
+        "Private control extensions",
+        [
+          "Extended the autonomous-driving work with MPCC comparison, modified PPO/SAC and a multi-head attention encoder.",
+          "Used the same methods in the physical golf-cart work, including an RL adapter and industrial-control integration. These extensions are maintained separately from the public CARLA repository."
+        ]
       ]
     ],
     "noteTitle": "Transfer the representation; inspect the control problem again.",
     "note": "A representation learned from expert examples supplies a useful starting point, but interactive training changes the observations the agent encounters. The pipeline makes the feature-transfer boundary explicit so the demonstration model, state inputs and actor–critic objective can be inspected separately.",
-    "boundary": "CARLA simulation work. My separate physical golf-cart contribution involved RL and classical local planning; that implementation remains private.",
-    "links": []
+    "boundary": "CARLA simulation work with separate private MPCC, modified PPO/SAC and attention-encoder extensions. The related physical golf-cart case study covers the vehicle deployment.",
+    "links": [],
+    "relatedId": "golf-cart",
+    "relatedLabel": "Physical golf-cart deployment"
   },
   {
     "id": "personal-os",
-    "number": "08",
+    "number": "09",
     "category": "Native systems / local inference",
     "title": "A memory system I can run.",
     "name": "Personal OS",
@@ -527,7 +591,7 @@
   },
   {
     "id": "private-compute",
-    "number": "09",
+    "number": "10",
     "category": "Infrastructure experiment",
     "title": "Access with an expiry.",
     "name": "Private compute workspaces",

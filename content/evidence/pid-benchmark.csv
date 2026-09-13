@@ -1,0 +1,73 @@
+label, nu, dt_ns, iters, p50, p95, p99, p999, jmin, jmax, tag1, tag2, tag3, tag4, build
+raw (null loop): 
+null, 1, 1000000, 200000, 2.047, 2.125, 2.359, 3.141, 1.750, 74.766, na ,na ,na, na, RelWithDebInfo
+pid (loop+timer): 
+pid, 1, 1000000, 200000, 51.188, 52.469, 65.391, 76.453, 50.641, 405.938, na ,na ,na, na, RelWithDebInfo
+net (pid only approx): 
+net, 1, 1000000, 200000, 49.141, 50.344, 63.031, 73.312, 48.891, 331.172, na ,na ,na, na, RelWithDebInfo
+raw (null loop): 
+null, 4, 1000000, 200000, 2.031, 2.125, 2.188, 2.734, 1.734, 39.750, na ,na ,na, na, RelWithDebInfo
+pid (loop+timer): 
+pid, 4, 1000000, 200000, 161.922, 196.578, 224.828, 262.828, 157.281, 848.094, na ,na ,na, na, RelWithDebInfo
+net (pid only approx): 
+net, 4, 1000000, 200000, 159.891, 194.453, 222.641, 260.094, 155.547, 808.344, na ,na ,na, na, RelWithDebInfo
+raw (null loop): 
+null, 8, 1000000, 200000, 1.859, 1.938, 2.078, 2.328, 1.672, 109.375, na ,na ,na, na, RelWithDebInfo
+pid (loop+timer): 
+pid, 8, 1000000, 200000, 294.859, 330.453, 356.469, 426.766, 292.578, 723.609, na ,na ,na, na, RelWithDebInfo
+net (pid only approx): 
+net, 8, 1000000, 200000, 293.000, 328.516, 354.391, 424.438, 290.906, 614.234, na ,na ,na, na, RelWithDebInfo
+raw (null loop): 
+null, 16, 1000000, 200000, 1.828, 1.891, 1.922, 2.344, 1.672, 44.359, na ,na ,na, na, RelWithDebInfo
+pid (loop+timer): 
+pid, 16, 1000000, 200000, 578.672, 638.422, 698.125, 823.578, 565.562, 1346.594, na ,na ,na, na, RelWithDebInfo
+net (pid only approx): 
+net, 16, 1000000, 200000, 576.844, 636.531, 696.203, 821.234, 563.891, 1302.234, na ,na ,na, na, RelWithDebInfo
+raw (null loop): 
+null, 32, 1000000, 200000, 2.062, 2.125, 2.172, 2.484, 1.922, 269.453, na ,na ,na, na, RelWithDebInfo
+pid (loop+timer): 
+pid, 32, 1000000, 200000, 1130.094, 1267.703, 1332.922, 1566.734, 1122.469, 1878.984, na ,na ,na, na, RelWithDebInfo
+net (pid only approx): 
+net, 32, 1000000, 200000, 1128.031, 1265.578, 1330.750, 1564.250, 1120.547, 1609.531, na ,na ,na, na, RelWithDebInfo
+raw (null loop): 
+null, 64, 1000000, 200000, 1.875, 1.953, 2.062, 2.438, 1.719, 318.516, na ,na ,na, na, RelWithDebInfo
+pid (loop+timer): 
+pid, 64, 1000000, 200000, 2297.484, 2576.203, 2643.047, 3201.656, 2283.859, 3557.406, na ,na ,na, na, RelWithDebInfo
+net (pid only approx): 
+net, 64, 1000000, 200000, 2295.609, 2574.250, 2640.984, 3199.219, 2282.141, 3238.891, na ,na ,na, na, RelWithDebInfo
+raw (null loop): 
+null, 1, 1000000, 200000, 1.891, 2.047, 2.219, 3.750, 1.719, 105.750, na ,na ,na, na, RelWithDebInfo
+pid (loop+timer): 
+pid, 1, 1000000, 200000, 56.484, 63.203, 74.125, 92.547, 54.984, 516.203, na ,na ,na, na, RelWithDebInfo
+net (pid only approx): 
+net, 1, 1000000, 200000, 54.594, 61.156, 71.906, 88.797, 53.266, 410.453, na ,na ,na, na, RelWithDebInfo
+raw (null loop): 
+null, 4, 1000000, 200000, 1.844, 1.891, 1.922, 2.141, 1.703, 251.156, na ,na ,na, na, RelWithDebInfo
+pid (loop+timer): 
+pid, 4, 1000000, 200000, 173.578, 191.141, 210.203, 251.016, 168.203, 605.562, na ,na ,na, na, RelWithDebInfo
+net (pid only approx): 
+net, 4, 1000000, 200000, 171.734, 189.250, 208.281, 248.875, 166.500, 354.406, na ,na ,na, na, RelWithDebInfo
+raw (null loop): 
+null, 8, 1000000, 200000, 1.969, 2.125, 2.172, 2.734, 1.750, 276.312, na ,na ,na, na, RelWithDebInfo
+pid (loop+timer): 
+pid, 8, 1000000, 200000, 318.266, 424.547, 471.344, 491.781, 309.844, 798.203, na ,na ,na, na, RelWithDebInfo
+net (pid only approx): 
+net, 8, 1000000, 200000, 316.297, 422.422, 469.172, 489.047, 308.094, 521.891, na ,na ,na, na, RelWithDebInfo
+raw (null loop): 
+null, 16, 1000000, 200000, 1.844, 1.906, 1.938, 2.125, 1.656, 39.312, na ,na ,na, na, RelWithDebInfo
+pid (loop+timer): 
+pid, 16, 1000000, 200000, 629.359, 705.469, 830.547, 941.734, 610.266, 1443.094, na ,na ,na, na, RelWithDebInfo
+net (pid only approx): 
+net, 16, 1000000, 200000, 627.516, 703.562, 828.609, 939.609, 608.609, 1403.781, na ,na ,na, na, RelWithDebInfo
+raw (null loop): 
+null, 32, 1000000, 200000, 1.844, 1.906, 1.922, 2.188, 1.703, 237.469, na ,na ,na, na, RelWithDebInfo
+pid (loop+timer): 
+pid, 32, 1000000, 200000, 1259.109, 1411.266, 1486.062, 1839.609, 1241.281, 2226.422, na ,na ,na, na, RelWithDebInfo
+net (pid only approx): 
+net, 32, 1000000, 200000, 1257.266, 1409.359, 1484.141, 1837.422, 1239.578, 1988.953, na ,na ,na, na, RelWithDebInfo
+raw (null loop): 
+null, 64, 1000000, 200000, 1.844, 1.906, 1.938, 2.047, 1.703, 39.984, na ,na ,na, na, RelWithDebInfo
+pid (loop+timer): 
+pid, 64, 1000000, 200000, 2508.844, 2809.562, 2860.547, 3436.656, 2497.750, 4014.484, na ,na ,na, na, RelWithDebInfo
+net (pid only approx): 
+net, 64, 1000000, 200000, 2507.000, 2807.656, 2858.609, 3434.609, 2496.047, 3974.500, na ,na ,na, na, RelWithDebInfo

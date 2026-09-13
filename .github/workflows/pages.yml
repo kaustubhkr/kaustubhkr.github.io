@@ -35,3 +35,15 @@ jobs:
       - name: Publish reviewed artifact
         id: deployment
         uses: actions/deploy-pages@v4
+  verify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rebuild expected public output
+        run: npm run build
+      - name: Verify live agent exports and media
+        run: node scripts/check-live.mjs

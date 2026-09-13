@@ -112,3 +112,66 @@
 
 /* Official qualification comparison. */
 .qualification-comparison{margin-block:32px}.qualification-comparison h3{font-size:28px}.qualification-comparison table{border-collapse:collapse;width:100%;min-width:540px;font-size:14px}.qualification-comparison caption{text-align:left;color:var(--muted);font-size:12px;padding-bottom:16px}.qualification-comparison th,.qualification-comparison td{text-align:left;padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top}.qualification-comparison thead th{font-family:var(--mono);font-size:11px;color:var(--muted);font-weight:400}.qualification-comparison .own-result{background:var(--surface);color:var(--accent)}.qualification-comparison .comparison-method{font-size:13px;color:var(--muted);line-height:1.7}
+
+/* Local reviewer revision: short overview, inspectable technical detail. */
+.review-home .hero{padding-bottom:48px;border-bottom:1px solid var(--line)}
+.review-home .hero-topline{margin:28px 0 30px}
+.review-home .hero-grid{align-items:start;gap:48px}
+.review-home .hero h1{font-size:clamp(40px,4.7vw,68px);line-height:1.06;letter-spacing:-.055em}
+.review-home .hero-media{margin-top:0}
+.review-home .hero-intro{font-size:19px}
+.review-home .hero-description{font-size:15px}
+.hero-actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.review-home .video-shell video{filter:none}
+.review-home .race-stats{padding:14px 0;gap:16px}
+.review-home .race-stats strong{font-size:32px}
+.review-home .race-caption{padding:12px 0}
+.review-home .race-technical{font-size:14px;color:var(--muted);margin:16px 0 12px}
+.source-links{flex-wrap:wrap;gap:14px 24px}
+.reviewer-work{padding:52px 0 36px;border-bottom:1px solid var(--line)}
+.compact-heading{margin-bottom:28px}.compact-heading .eyebrow{margin-bottom:10px}.compact-heading h2{font-size:36px}
+.review-card{display:grid;grid-template-columns:.7fr 1.3fr;gap:42px;padding:28px 0;border-top:1px solid var(--line);scroll-margin-top:24px}
+.review-card .eyebrow{margin:0 0 12px;font-size:11px}
+.review-card h3{margin:0;font-size:27px;line-height:1.25}
+.review-card h3 .text-link{display:inline;font:inherit}
+.review-card h3 .text-link span{color:var(--accent);white-space:nowrap}
+.review-card p{margin:0 0 12px;font-size:16px;line-height:1.65}
+.review-card .review-mechanism{color:var(--muted);font-size:14px}
+.review-proof{padding-left:15px;border-left:2px solid var(--accent);color:var(--muted);font-size:14px!important;line-height:1.65}
+.review-card .source-links{margin:18px 0 0;display:flex}
+.review-card .source-links a{color:var(--accent);font-size:13px}
+.more-work{border-top:1px solid var(--line);padding-top:24px;font-size:14px;color:var(--muted)}
+.more-work p{margin:0 0 12px}.more-work a{color:var(--text)}
+.current-focus{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding-block:48px;border-bottom:1px solid var(--line)}
+.current-focus h2{font-size:34px}.current-focus .eyebrow{margin-bottom:16px}.current-focus p{margin:0 0 18px;color:var(--muted);font-size:16px}
+.compact-contact{display:flex;justify-content:space-between;align-items:center;gap:25px;padding-block:38px;border-bottom:1px solid var(--line)}
+.compact-contact h2{font-size:28px;margin-bottom:7px}.compact-contact .eyebrow{margin-bottom:10px}.compact-contact p{margin:0;color:var(--muted);font-size:14px}.compact-contact .email-link{font-size:20px;color:var(--accent);overflow-wrap:anywhere}
+.project-intro{padding-top:48px;padding-bottom:32px}.project-intro h1{font-size:clamp(36px,4.8vw,64px)}.project-intro .page-deck{font-size:21px;max-width:960px}.project-facts{margin-top:30px;padding-block:23px}
+.project-body>section{margin-bottom:36px}.project-body .lead-copy{font-size:22px}
+.technical-disclosure{border-block:1px solid var(--line);margin-bottom:35px}
+.technical-disclosure>summary{cursor:pointer;padding:22px 0;font-size:21px;color:var(--accent)}
+.technical-disclosure>summary span{display:block;font-size:14px;color:var(--muted);padding-left:22px;margin-top:5px}
+.technical-disclosure>section{margin:25px 0 40px}.technical-disclosure[open]>summary{border-bottom:1px solid var(--line)}
+.technical-disclosure .engineering-note{padding:25px}.next-project{padding-block:35px}.next-project h2{font-size:32px}
+.work-catalogue{padding-top:0}.page-intro{padding-top:48px;padding-bottom:38px}.about-opening{padding-bottom:20px}.timeline-row{padding-block:22px}
+@media(max-width:1000px){.review-home .hero-grid{gap:28px}.review-home .hero h1{font-size:44px}.review-card{grid-template-columns:.8fr 1.2fr;gap:26px}.compact-contact{align-items:flex-start;flex-direction:column}}
+@media(max-width:760px){.review-home .hero h1{font-size:clamp(38px,8.9vw,60px)}.review-home .hero-grid{gap:32px}.review-home .hero-intro{font-size:18px}.review-home .hero-topline{font-size:11px}.review-card{grid-template-columns:1fr;gap:16px;padding-block:26px}.review-card h3{font-size:26px}.current-focus{grid-template-columns:1fr;gap:14px;padding-block:32px}.reviewer-work{padding-top:32px}.compact-heading h2{font-size:30px}.current-focus h2{font-size:30px}.project-intro .page-deck{font-size:19px}.project-body .lead-copy{font-size:20px}.technical-disclosure>summary{font-size:19px}.compact-contact .email-link{font-size:18px}.review-home .race-stats strong{font-size:30px}.project-intro{padding-top:30px}.page-intro{padding-bottom:30px}}
+@media(max-width:760px){.site-header .contact-nav{display:inline-flex;border:0;padding:0}.site-header .contact-nav span{margin-left:6px}.site-header nav{flex-wrap:wrap}}
+
+/* Life story: timeline first, with brief personal milestones. */
+.life-intro{padding-bottom:28px}.life-intro h1{font-size:clamp(40px,5vw,64px);margin-bottom:12px}.life-intro .eyebrow{margin-bottom:16px}.life-intro .page-deck{font-size:20px;margin-bottom:0}
+.life-timeline{padding-bottom:32px;border-bottom:1px solid var(--line)}.life-timeline .timeline-row{padding-block:18px;grid-template-columns:160px 1fr;gap:28px}.life-timeline .timeline-row h3{font-size:24px;margin:0 0 6px}.life-timeline .timeline-row p{font-size:16px;max-width:760px;margin:0}.life-timeline .timeline-date>span:first-child{font-size:20px}.timeline-footnote{color:var(--muted);font-size:11px;margin-top:22px}
+@media(max-width:760px){.life-intro{padding-top:30px}.life-timeline .timeline-row{grid-template-columns:95px 1fr;gap:18px;padding-block:18px}.life-timeline .timeline-row h3{font-size:21px}.life-timeline .timeline-row p{font-size:15px}.life-timeline .timeline-date>span:first-child{font-size:16px}.life-timeline .timeline-date .mono{font-size:11px}.life-intro .page-deck{font-size:17px}}
+
+/* Recovered personal media stays compact in the life timeline. */
+.project-media>img{display:block;width:100%;height:auto}
+.life-timeline .timeline-media{max-width:520px;margin:20px 0 5px}
+.timeline-media video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#090b08}
+.timeline-media figcaption{font-size:12px;line-height:1.6}
+.timeline-media figcaption a{font-size:12px;margin-left:5px}
+
+.context-index{display:flex;flex-wrap:wrap;gap:12px 24px;font-size:14px;margin-top:24px}
+.context-document{max-width:1000px}.context-document article{border-top:1px solid var(--line);padding:35px 0;scroll-margin-top:90px}
+.context-copy{white-space:pre-wrap;overflow-wrap:anywhere;font-size:16px;line-height:1.75;color:var(--muted)}
+
+.agent-reading-note{font-size:12px;line-height:1.7;color:var(--muted);max-width:440px;margin-top:20px}.agent-reading-note .text-link{font-size:inherit;display:inline}.context-guide{font-size:15px;color:var(--muted);line-height:1.7;max-width:850px}

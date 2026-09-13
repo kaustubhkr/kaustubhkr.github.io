@@ -1,6 +1,8 @@
 # Kaustubh Krishna / Portfolio
 
-Static founder portfolio with seven independent flagship robotics systems, including physical golf-cart autonomy, three archived experiments, a technical thesis, biography and original footage. The homepage leads with a second Physical AI company in stealth and ICRA autonomous racing. The RLx-Core page leads with probabilistic dynamics and world-model research, followed by interactive policy-optimisation and runtime-contract views. Control measurements are visualised from the original public CSVs.
+Static founder portfolio with a short application-facing overview, seven robotics case studies and three archived experiments. The homepage pairs an ICRA qualification result with three selected engineering summaries: industrial evidence, robot learning and measured control. Each summary states the outcome, mechanism and available evidence. Project pages keep a concise overview and an expandable technical deep dive, with measurements and competition records visible outside the disclosure.
+
+The current company remains in stealth. Industry 6.0 is framed as a long-term direction; the research page lists technical questions and evaluation criteria. Biography, timeline and original early robotics footage live in About.
 
 ## Local review
 
@@ -43,3 +45,11 @@ Canonical metadata targets `https://kaustubhkr.github.io/`. Internal links are r
 The production repository is `kaustubhkr/kaustubhkr.github.io`. Pushes to `main` run the build and validation checks, then publish only `dist/` through GitHub Actions. The previous project URL is maintained as a redirect to the account-root site. `migration/legacy-index.html` is a prepared redirect for that old location; deploy it there only after the new root site is verified live. Do not deploy the redirect at the new root.
 
 Deploy the `dist/` artifact to publish only the reviewed files. The source checkout includes build tooling and is not the deployment artifact.
+
+## Agent-readable portfolio
+
+`full-context.html` combines all 15 content pages into one static reading surface. `llms-full.txt` contains the same public copy as plain text with absolute source, evidence and media URLs; `llms.txt` provides the reading index. Every technical tab and collapsed deep dive is included. These files are derived from the rendered pages on every build, so there is no separately maintained biography or project summary to drift.
+
+Every page links to the full-context view in its footer and exposes the plain-text alternate in its HTML head. The full-context page is in the sitemap; existing robots rules allow crawling. Agent discovery and retrieval remain dependent on the browsing tool, so the full-context URL is the most direct single-link option.
+
+The homepage includes a direct agent-reading prompt. The reading guide explains full-text retrieval, the HTML fallback, source attribution and truncation recovery; both aggregate formats end with an explicit completion marker. After every GitHub Pages deployment, `scripts/check-live.mjs` verifies public content hashes, HTTP content types, crawler user-agent access and video byte ranges. It checks reachability, not vendor indexing or uptime guarantees.

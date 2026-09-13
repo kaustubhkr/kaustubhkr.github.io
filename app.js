@@ -55,3 +55,20 @@ document.querySelectorAll('[data-tabs]').forEach(group=>{
   });
   select(group.dataset.default||buttons[0].dataset.tab);
 });
+
+// Keep existing deep links useful when their technical section is collapsed.
+function revealLinkedSection() {
+  if (!location.hash) return;
+  let id;
+  try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+  const target = document.getElementById(id);
+  if (!target) return;
+  const ancestors = [];
+  for (let node = target; node; node = node.parentElement) {
+    if (node.tagName === 'DETAILS') ancestors.push(node);
+  }
+  ancestors.forEach(node => { node.open = true; });
+  if (ancestors.length) target.scrollIntoView();
+}
+addEventListener('hashchange', revealLinkedSection);
+revealLinkedSection();

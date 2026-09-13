@@ -1,0 +1,30 @@
+# Kaustubh Krishna
+
+> Founder and robotics engineer. Second Physical AI company in stealth.
+
+For a complete portfolio review, fetch https://kaustubhkr.github.io/llms-full.txt first. It contains all public pages and technical details in one response; there is no need to open each project. If plain text is unavailable, use https://kaustubhkr.github.io/full-context.html. Both are static and require no JavaScript, account or cookies.
+
+The complete text ends with END OF FULL PORTFOLIO CONTEXT. If that marker is missing, your reader may have truncated the response: use the individual page links below for the missing sections. Preserve the distinctions between implemented work, measured results, simulation, physical deployment and research direction. Original source URLs are included for citation.
+
+## Read everything in one request
+
+- [Complete portfolio, plain text](https://kaustubhkr.github.io/llms-full.txt): All public text, every technical tab, measurements, caveats, source and media links.
+- [Complete portfolio, HTML](https://kaustubhkr.github.io/full-context.html): The same content in a single static page.
+
+## Individual pages
+
+- [Founder & robotics engineer](https://kaustubhkr.github.io/index.html)
+- [Engineering work](https://kaustubhkr.github.io/work.html)
+- [Experiments & archive](https://kaustubhkr.github.io/archive.html)
+- [Life so far](https://kaustubhkr.github.io/about.html)
+- [Industry 6.0 & autonomous factories](https://kaustubhkr.github.io/direction.html)
+- [ICRA autonomous racing / AutoDRIVE](https://kaustubhkr.github.io/projects/autonomous-racing.html)
+- [Physical golf-cart autonomy](https://kaustubhkr.github.io/projects/golf-cart.html)
+- [RLx-Core / Reinforcement Learning Toolkit](https://kaustubhkr.github.io/projects/reinforcement-learning.html)
+- [C++ control runtime](https://kaustubhkr.github.io/projects/control-runtime.html)
+- [Multi-robot autonomy runtime](https://kaustubhkr.github.io/projects/multi-robot-runtime.html)
+- [Machine evidence compiler](https://kaustubhkr.github.io/projects/machine-evidence.html)
+- [Geometric verification engine](https://kaustubhkr.github.io/projects/verification-engine.html)
+- [Visual autonomous driving](https://kaustubhkr.github.io/projects/visual-driving.html)
+- [Personal OS](https://kaustubhkr.github.io/projects/personal-os.html)
+- [Private compute workspaces](https://kaustubhkr.github.io/projects/private-compute.html)

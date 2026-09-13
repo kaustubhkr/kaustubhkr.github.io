@@ -1,0 +1,1482 @@
+# Kaustubh Krishna — full portfolio context
+
+Complete public portfolio of Kaustubh Krishna: founder context, life timeline, every project, all technical tabs and deep dives, measurements, source links and media references. Generated from the same pages as the human-readable site. Private source code is not included. Simulation, physical deployment, measured results and research direction retain their original scope.
+
+Reading guide: this document contains 15 source pages, including every technical tab and deep dive. Read the project scope and evidence alongside its capabilities. Source URLs identify the original pages to cite; media URLs identify recordings and images, not video transcripts. If your reader truncates the response, use the source-page index at https://kaustubhkr.github.io/llms.txt to retrieve the missing sections. A complete response ends with END OF FULL PORTFOLIO CONTEXT. No JavaScript, login or interactive navigation is needed.
+
+# Founder & robotics engineer
+Source: https://kaustubhkr.github.io/index.html
+
+Kaustubh Krishna / Founder & engineer Physical AI / India
+
+# I build systems
+that control
+physical machines.
+Autonomous vehicles, robot learning and industrial verification. Now building a Physical AI company around production goals, machine execution and verified outcomes.
+Previously founded AviRob. I work across learning algorithms, control runtimes and the evidence needed to understand what a machine actually did.
+Selected work ↓ (https://kaustubhkr.github.io/index.html#work) View life story ↗ (https://kaustubhkr.github.io/about.html)
+For AI readers: read the full portfolio ↗ (https://kaustubhkr.github.io/full-context.html) or fetch all text ↗ (https://kaustubhkr.github.io/llms-full.txt) for every project, result and technical detail.
+
+ICRA 2025 / Autonomous racing
+
+Media: https://kaustubhkr.github.io/assets/racing-loop.mp4
+Ⅱ
+Sole builder · simulation competition IEEE International Conference on Robotics and Automation
+
+3 rd Qualification
+0 Collisions
+81.32 s Run time
+
+MPCC comparison, modified PPO/SAC and multi-head attention; controller training through ROS 2 integration.
+Watch run & read the build ↗ (https://kaustubhkr.github.io/projects/autonomous-racing.html) Official results ↗ (https://autodrive-ecosystem.github.io/competitions/roboracer-sim-racing-icra-2025/#results)
+
+Selected engineering
+
+## What I built. What it enables.
+
+AviRob / industrial systems
+
+### Robot logs into traceable evidence ↗ (https://kaustubhkr.github.io/projects/machine-evidence.html)
+
+Built a compiler that reconciles fragmented robot and controller logs into one replayable timeline, with each observation traceable to its source.
+VDA 5050/MQTT, OPC UA, SICK scan3 UDP and MCAP/rosbag2; datagram reassembly and clock alignment.
+Private implementation. The ROSCon India 2025 talk explains the AMR/AGV evidence architecture.
+Technical case study ↗ (https://kaustubhkr.github.io/projects/machine-evidence.html) ROSCon talk ↗ (https://www.youtube.com/watch?v=8RZy6ztm5Wg)
+
+Learning & world models
+
+### World models & policy optimisation ↗ (https://kaustubhkr.github.io/projects/reinforcement-learning.html)
+
+Built a toolkit for testing how learned dynamics and policy updates produce continuous-control behaviour.
+JAX/Flax probabilistic dynamics and MBPO experiments; PPO, SAC, TRPO Hessian–vector solvers and REDQ critic ensembles.
+Public algorithm implementations and model-based experiments; latent-world-model research documented separately.
+Technical case study ↗ (https://kaustubhkr.github.io/projects/reinforcement-learning.html) Code ↗ (https://github.com/kaustubhkr/reinforcement-learning-toolkit)
+
+Control engineering
+
+### Measured C++ control ↗ (https://kaustubhkr.github.io/projects/control-runtime.html)
+
+Built a C++20 control core with explicit actuator limits and state-consistent controller switching.
+Arena-backed controller state, bumpless transfer and timing sweeps over 1–64 channels.
+Recorded position response settles within ±2% at 342 ms in a simulated integrator plant. Response plots, percentiles and source CSVs are public.
+Technical case study ↗ (https://kaustubhkr.github.io/projects/control-runtime.html) Code ↗ (https://github.com/kaustubhkr/industrial-control-toolkit) Measurements ↗ (https://kaustubhkr.github.io/projects/control-runtime.html#evidence)
+
+Also built: physical golf-cart autonomy ↗ (https://kaustubhkr.github.io/projects/golf-cart.html) , multi-robot execution ↗ (https://kaustubhkr.github.io/projects/multi-robot-runtime.html) and geometric verification ↗ (https://kaustubhkr.github.io/projects/verification-engine.html) .
+All work & experiments ↗ (https://kaustubhkr.github.io/work.html)
+
+Building now / Industry 6.0
+
+## From a production goal
+to verified machine work.
+
+My second company is in stealth. I’m working on how industrial systems translate an intended outcome into machine actions, recover when execution diverges and verify the physical result.
+The technical question: how much of that work can transfer when the machine, fixture or task changes?
+Research questions & evaluation ↗ (https://kaustubhkr.github.io/direction.html)
+
+Contact
+
+## Kaustubh Krishna
+Founder · robotics & industrial autonomy · India
+
+kaustubhkr.work@gmail.com ↗ (mailto:kaustubhkr.work@gmail.com)
+
+---
+
+# Engineering work
+Source: https://kaustubhkr.github.io/work.html
+
+Work
+
+# Robotics & industrial systems.
+What each system does, how I built it, and the evidence behind it.
+
+Autonomous systems
+
+### Autonomous racing at ICRA ↗ (https://kaustubhkr.github.io/projects/autonomous-racing.html)
+
+Built the controller that placed third in ICRA 2025 simulation qualification: 81.32 seconds, zero collisions.
+MPCC comparison, modified PPO and SAC, multi-head attention encoding and a ROS 2 training-to-control pipeline.
+Official results and qualification footage. Sole builder; final time-attack placement: 14th.
+Technical case study ↗ (https://kaustubhkr.github.io/projects/autonomous-racing.html)
+
+Autonomous systems / physical vehicle
+
+### Autonomy on a physical golf cart ↗ (https://kaustubhkr.github.io/projects/golf-cart.html)
+
+Deployed a learned-control stack on a physical golf cart, connecting an RL adapter to the vehicle’s industrial controls.
+MPCC comparison, modified PPO and SAC, and multi-head attention encoding, developed alongside CARLA experiments.
+Private implementation. A separate vehicle project from the ICRA simulation entry.
+Technical case study ↗ (https://kaustubhkr.github.io/projects/golf-cart.html)
+
+Learning & world models
+
+### World models & policy optimisation ↗ (https://kaustubhkr.github.io/projects/reinforcement-learning.html)
+
+Built a toolkit for testing how learned dynamics and policy updates produce continuous-control behaviour.
+JAX/Flax probabilistic dynamics and MBPO experiments; PPO, SAC, TRPO Hessian–vector solvers and REDQ critic ensembles.
+Public algorithm implementations and model-based experiments; latent-world-model research documented separately.
+Technical case study ↗ (https://kaustubhkr.github.io/projects/reinforcement-learning.html) Code ↗ (https://github.com/kaustubhkr/reinforcement-learning-toolkit)
+
+Control engineering
+
+### Measured C++ control ↗ (https://kaustubhkr.github.io/projects/control-runtime.html)
+
+Built a C++20 control core with explicit actuator limits and state-consistent controller switching.
+Arena-backed controller state, bumpless transfer and timing sweeps over 1–64 channels.
+Recorded position response settles within ±2% at 342 ms in a simulated integrator plant. Response plots, percentiles and source CSVs are public.
+Technical case study ↗ (https://kaustubhkr.github.io/projects/control-runtime.html) Code ↗ (https://github.com/kaustubhkr/industrial-control-toolkit) Measurements ↗ (https://kaustubhkr.github.io/projects/control-runtime.html#evidence)
+
+Industrial robotics
+
+### Coordinated robot execution ↗ (https://kaustubhkr.github.io/projects/multi-robot-runtime.html)
+
+Built a simulation runtime that keeps robot localisation, command ownership and mission state consistent.
+Namespaced AMCL, dual-LiDAR merging, frame-authority checks and freshness-gated velocity arbitration.
+Private simulation-development runtime; deterministic scenario recording. No certified safety function is claimed.
+Technical case study ↗ (https://kaustubhkr.github.io/projects/multi-robot-runtime.html)
+
+AviRob / industrial systems
+
+### Robot logs into traceable evidence ↗ (https://kaustubhkr.github.io/projects/machine-evidence.html)
+
+Built a compiler that reconciles fragmented robot and controller logs into one replayable timeline, with each observation traceable to its source.
+VDA 5050/MQTT, OPC UA, SICK scan3 UDP and MCAP/rosbag2; datagram reassembly and clock alignment.
+Private implementation. The ROSCon India 2025 talk explains the AMR/AGV evidence architecture.
+Technical case study ↗ (https://kaustubhkr.github.io/projects/machine-evidence.html) ROSCon talk ↗ (https://www.youtube.com/watch?v=8RZy6ztm5Wg)
+
+AviRob / geometry & verification
+
+### Geometry-backed verification ↗ (https://kaustubhkr.github.io/projects/verification-engine.html)
+
+Built an engine that checks recorded machine behaviour against site geometry and traces each finding to its observations.
+Point-in-polygon and clearance queries, bounded temporal alignment and evidence-gated interlock validators.
+Private implementation. PASS, FAIL or NOT_VERIFIABLE findings; engineering analysis, not certification.
+Technical case study ↗ (https://kaustubhkr.github.io/projects/verification-engine.html)
+
+Other experiments: visual driving, native inference & compute ↗ (https://kaustubhkr.github.io/archive.html)
+
+---
+
+# Experiments & archive
+Source: https://kaustubhkr.github.io/archive.html
+
+Experiments & archive
+
+# Other systems.
+Same curiosity.
+Work in visual driving, native inference and access infrastructure, alongside the main robotics programme.
+Back to flagship work ↗ (https://kaustubhkr.github.io/work.html)
+CARLA / representation transfer Demonstrations become control features. 01 / Observe RGB + additional channels
+02 / Imitate visual features → control heads
+03 / Reuse checkpoint feature extractor
+04 / Improve visual features + vehicle state
+
+↖ Supervised imitation → representation reuse → actor–critic
+(https://kaustubhkr.github.io/projects/visual-driving.html) 08 / Robot learning Public repository
+
+### Demonstration to interaction. ↗ (https://kaustubhkr.github.io/projects/visual-driving.html)
+Visual autonomous driving
+
+- Built expert-data collection, visual imitation learning and continuous-control training paths.
+
+- Reused imitation-checkpoint features, fused with vehicle state, inside an actor–critic pipeline.
+
+- Implemented simulator environments, checkpoint recovery, monitoring and multi-environment training utilities.
+Physical golf-cart deployment ↗ (https://kaustubhkr.github.io/projects/golf-cart.html)
+Representation transfer / Imitation learning Inside the system ↗ (https://kaustubhkr.github.io/projects/visual-driving.html)
+
+Native macOS / local inference Capture keeps running while models decode. 01 / Capture AudioQueue · 20 ms PCM
+02 / Separate screen audio ≠ microphone
+03 / Decode bounded workers + GPU gate
+04 / Remember lossless chunks → SQLite
+
+↖ Audio callbacks are separate from inference work
+(https://kaustubhkr.github.io/projects/personal-os.html) 09 / Native systems / local inference Private work
+
+### A memory system I can run. ↗ (https://kaustubhkr.github.io/projects/personal-os.html)
+Personal OS
+
+- Separate AudioQueue dictation and ScreenCaptureKit + microphone meeting paths.
+
+- 20 ms PCM input, rolling lossless audio, provisional decoding and an independent final pass.
+
+- Bounded local model workers, GPU request serialization and SQLite-backed personal memory.
+Swift / macOS / Audio systems Inside the system ↗ (https://kaustubhkr.github.io/projects/personal-os.html)
+
+Private compute / session lifecycle Host presence is not session authority. 01 / Register host identity + heartbeat
+02 / Invite expiring access
+03 / Connect authorised streaming session
+04 / Revoke expiry + audit
+
+↖ Host registration, presence and invitation state
+(https://kaustubhkr.github.io/projects/private-compute.html) 10 / Infrastructure experiment Private work
+
+### Access with an expiry. ↗ (https://kaustubhkr.github.io/projects/private-compute.html)
+Private compute workspaces
+
+- Host registration, heartbeat metrics and time-limited browser invite sessions.
+
+- Explicit session revocation with a readable event audit trail.
+
+- Policy wrapper around existing streaming endpoints, with file transfer denied by default.
+Session lifecycle / Access control Inside the system ↗ (https://kaustubhkr.github.io/projects/private-compute.html)
+
+---
+
+# Life so far
+Source: https://kaustubhkr.github.io/about.html
+
+Kaustubh Krishna / Off the clock, mostly
+
+# Life so far.
+A few milestones. Several bugs. Still running.
+
+2006 Born
+
+### Hello World!
+Arrived without a manual. Made myself heard.
+
+Early years
+
+### Learned to walk. Learned to talk.
+Balance took a few iterations. Talking was harder to switch off.
+
+2014 Age 8
+
+### Two computers. Unlimited plans.
+Intel Pentium dual-core. 2 GB RAM each. 28–100 GB HDDs. My first compute cluster, if you’re generous.
+
+2015 Age 9
+
+### First programs.
+Scratch, QBasic and web development. Things moved on screen because I told them to. This seemed like a loophole.
+
+2016 Age 10
+
+### Java. My first proper language.
+Hello World now required a class.
+
+2018–2022 Ages 12–16
+
+### The code grew wheels.
+WRO India: regional Junior second place in 2019; RoboMission Senior Silver Badge at nationals in 2022. Bugs could now leave the desk.
+
+2022 Age 16
+
+### First heartbreak.
+No stack trace. Terrible documentation.
+
+2023–2024 Ages 17–18
+
+### The wheels got bigger.
+Deployed autonomy on a real golf cart: Model Predictive Contouring Control (MPCC), learned policies and industrial controls. No simulator reset button.
+
+Image: Kaustubh and the project team with the physical autonomous golf cart (https://kaustubhkr.github.io/assets/golf-cart.jpg)
+The real golf cart, with the team. Inside the build ↗ (https://kaustubhkr.github.io/projects/golf-cart.html)
+
+2025 Age 19
+
+### Raced robots. Spoke to humans.
+Built my ICRA racing entry solo: third in simulation qualification, zero collisions. Presented industrial robotics work at ROSCon India.
+
+2025–2026 Ages 19–20
+
+### First startup: AviRob.
+Built robot runtimes and machine-evidence systems. Discovered that companies have rather a lot of non-code problems.
+
+Media: https://kaustubhkr.github.io/assets/avirob-isaac-sim.mp4
+AviRob · three-robot warehouse demo in Isaac Sim · silent. Inside the runtime ↗ (https://kaustubhkr.github.io/projects/multi-robot-runtime.html)
+
+2026 Age 20
+
+### Second company. Still building.
+Physical AI for industry, in stealth. Apparently one startup was not enough character development.
+
+Home videos, with motors
+
+## Before the bigger wheels.
+Actual footage. The robots were smaller. The enthusiasm was not.
+
+Media: https://kaustubhkr.github.io/assets/early-pid.mp4
+PID line-following test · personal project archive
+
+Media: https://kaustubhkr.github.io/assets/wro-demo-silent-125.mp4
+World Robot Olympiad robot test · 1.25× speed · silent
+
+WRO India 2019 · regional Junior second place +
+
+Image: WRO India 2019 plaque: second position, Junior Regional Championship (https://kaustubhkr.github.io/assets/wro-robot.jpeg)
+
+Contact
+
+## Kaustubh Krishna
+Founder · robotics & industrial autonomy · India
+
+kaustubhkr.work@gmail.com ↗ (mailto:kaustubhkr.work@gmail.com)
+
+---
+
+# Industry 6.0 & autonomous factories
+Source: https://kaustubhkr.github.io/direction.html
+
+Research direction / Second company in stealth
+
+# Make machine work
+transferable and verifiable.
+Industry 6.0 is my long-term ambition. The research problem is concrete: preserve a task’s intended outcome when its machine, fixture or operating conditions change.
+
+Working representation task = outcome + constraints + preconditions + actions + acceptance A command acknowledgement does not establish that the physical outcome occurred. Completion needs observations tied to the task’s acceptance conditions.
+
+01
+
+### Bind intent to a real machine.
+Represent target state, units, geometry and tolerances; bind process steps to available resources. Evaluate mapping effort and task completion after a machine or fixture change.
+
+02
+
+### Learn where prediction changes action.
+Use learned dynamics for action selection and recovery. Compare against classical control under the same constraints: rollout error, task success, tail latency and failure cases.
+
+03
+
+### Recover with evidence.
+Invalidate dependent steps after physical state changes. Test interrupted motion, stale observations and missing evidence; measure detection and recovery, and withhold unsupported verdicts.
+
+These are research questions and evaluation criteria. The engineering case studies ↗ (https://kaustubhkr.github.io/work.html) document work built so far.
+
+Contact
+
+## Kaustubh Krishna
+Founder · robotics & industrial autonomy · India
+
+kaustubhkr.work@gmail.com ↗ (mailto:kaustubhkr.work@gmail.com)
+
+---
+
+# ICRA autonomous racing / AutoDRIVE
+Source: https://kaustubhkr.github.io/projects/autonomous-racing.html
+
+← Flagship work (https://kaustubhkr.github.io/work.html) 01 / Autonomous systems 2025–2026
+
+# Autonomous racing at ICRA
+Built the controller that placed third in ICRA 2025 simulation qualification: 81.32 seconds, zero collisions.
+System ICRA autonomous racing / AutoDRIVE
+My contribution Sole builder · controller, training, integration & submission
+Access Private implementation
+
+Engineering & evidence MPCC comparison, modified PPO and SAC, multi-head attention encoding and a ROS 2 training-to-control pipeline.
+Official results and qualification footage. Sole builder; final time-attack placement: 14th.
+
+Media: https://kaustubhkr.github.io/assets/icra-qualification.mp4
+ICRA 2025 RoboRacer Sim Racing League · qualification footage excerpt
+
+81.32 s Qualification run
+0 Collisions
+8.03 s Best lap
+
+Competition record
+
+## Built and submitted independently.
+I designed, trained, integrated, evaluated and submitted the controller. The 2025 competition stack covered the ROS 2/Gymnasium bridge, observations, steering–throttle actions, rewards and checkpoints. ONNX, TensorRT and Triton inference tooling followed in 2026.
+Qualification · 3rd 81.32 s total · 0 collisions · 8.03 s best lap.
+
+Final time attack · 14th A separate run on a different track.
+
+Placed ahead of entries from Autonomous Racing at Penn and the Autoware Foundation in qualification, using the official collision-adjusted standings.
+Official results & full standings ↗ (https://autodrive-ecosystem.github.io/competitions/roboracer-sim-racing-icra-2025/#results)
+Technical deep dive Architecture, implementation & tradeoffs
+System architecture MPCC / attention-based reinforcement learning
+
+### Classical optimisation × learned control
+
+- 01
+
+#### Compare
+MPCC · modified PPO / SAC Compare model-predictive contouring control with policy-optimisation and actor–critic variants.
+
+- 02
+
+#### Encode
+multi-head attention Build the learned observation representation inside the private racing stack.
+
+- 03
+
+#### Integrate
+ROS 2 ↔ controller Connect observations, actions, reward signals, training and checkpoint evaluation.
+
+- 04
+
+#### Export
+ONNX → TensorRT / Triton Extend policy inference with export, engine-build and serving adapters after the competition.
+
+↖ Controller design, representation learning and execution were part of the same independently built AutoDRIVE project.
+Controllers MPCC comparison · modified PPO and SAC
+Representation Multi-head attention encoder
+Competition Third in qualification · separate final time-attack result
+
+01 / Implementation
+
+## Controller comparison & learned representation
+
+- Compared Model Predictive Contouring Control (MPCC) with modified PPO and SAC controllers in the same autonomous-racing project.
+
+- Built a multi-head attention encoder as part of the learned-control work.
+
+- Developed the controller variants and encoder in a private local codebase. The retained PPO baseline uses a separate, explicit observation/action contract.
+
+02 / Implementation
+
+## The retained PPO baseline
+
+- Wrote the ROS 2 environment bridge around LiDAR, collision and lap feedback, with steering and throttle command publishers.
+
+- The retained baseline includes 180 LiDAR features and 25 discrete steering–throttle combinations, with lower-throttle turning actions and higher-throttle straight actions.
+
+- Maintained additional observation and factored-action experiments as the training interface evolved.
+
+03 / Implementation
+
+## The training system
+
+- Experimented with collision penalties, survival terms, throttle incentives and lap feedback. The reward defines what the agent is encouraged to do; lap outcomes establish what it actually did.
+
+- Built checkpoint resume, evaluation and training variants around Stable-Baselines3 PPO.
+
+- The accompanying manuscript investigates compact LiDAR policies, observation aggregation and reward shaping. I am its first author; it is not published.
+
+04 / Implementation
+
+## The inference continuation
+
+- In 2026, added ONNX export, TensorRT engine-build tooling and Triton serving adapters. These extensions came after the 2025 competition.
+
+Engineering note
+
+## The control contract shapes the policy.
+Compressing a scan changes which geometry the agent can observe. Discretising steering and throttle changes the manoeuvres it can express. Rewarding throttle commands changes the optimisation target without directly measuring speed. I treated these choices as part of the controller, alongside the network and optimiser.
+
+Project context Simulation competition. Third in qualification; the entry later finished 14th in the final time-attack race. The two rounds evaluate different runs and tracks.
+Official competition results ↗ (https://autodrive-ecosystem.github.io/competitions/roboracer-sim-racing-icra-2025/#results)
+
+Keep exploring
+
+## Learned control. On a real vehicle.
+↗ (https://kaustubhkr.github.io/projects/golf-cart.html) Physical golf-cart autonomy
+
+---
+
+# Physical golf-cart autonomy
+Source: https://kaustubhkr.github.io/projects/golf-cart.html
+
+← Flagship work (https://kaustubhkr.github.io/work.html) 02 / Autonomous systems / physical vehicle CARLA → physical vehicle
+
+# Autonomy on a physical golf cart
+Deployed a learned-control stack on a physical golf cart, connecting an RL adapter to the vehicle’s industrial controls.
+System Physical golf-cart autonomy
+My contribution Controller development, RL adapter & vehicle deployment
+Access Private implementation
+
+Engineering & evidence MPCC comparison, modified PPO and SAC, and multi-head attention encoding, developed alongside CARLA experiments.
+Private implementation. A separate vehicle project from the ICRA simulation entry.
+
+Image: Kaustubh and the project team with the physical autonomous golf cart (https://kaustubhkr.github.io/assets/golf-cart.jpg)
+The real golf cart, with the team. Physical vehicle project · separate from ICRA racing.
+
+Technical deep dive Architecture, implementation & tradeoffs
+System architecture Physical golf cart / controller integration
+
+### Policy → adapter → vehicle
+
+- 01
+
+#### Compare
+MPCC · modified PPO / SAC Classical and learned-control work across autonomous-driving experiments.
+
+- 02
+
+#### Encode
+multi-head attention Encode driving observations for the learned vehicle controller.
+
+- 03
+
+#### Connect
+RL adapter + industrial controls Integrate the learning controller with the physical control system.
+
+- 04
+
+#### Deploy
+physical golf cart Run the autonomous-driving work on a real vehicle.
+
+↖ The vehicle deployment includes the control integration, not only a trained policy in simulation.
+Development CARLA and autonomous-driving experiments
+Hardware Physical golf-cart deployment
+Implementation Private local codebase
+
+01 / Implementation
+
+## Controllers and representation
+
+- Compared MPCC with modified PPO/SAC in the autonomous-driving controller stack.
+
+- Built a multi-head attention encoder as part of the learned-control work.
+
+02 / Implementation
+
+## From policy to vehicle
+
+- Built the reinforcement-learning adapter and industrial-control integration for the physical golf cart.
+
+- Carried the autonomous-driving work into real-vehicle execution; the implementation is private and stored locally.
+
+Engineering note
+
+## The adapter is part of the controller.
+A trained policy needs a path into the physical control system. My work included that integration: the RL adapter, industrial controls and deployment on the vehicle, alongside the learning and classical-control methods.
+
+Project context An independent autonomous-vehicle project, developed through CARLA experiments and deployed on a physical golf cart. The implementation is private.
+
+Keep exploring
+
+## World models. Policy optimisation.
+↗ (https://kaustubhkr.github.io/projects/reinforcement-learning.html) RLx-Core / Reinforcement Learning Toolkit
+
+---
+
+# RLx-Core / Reinforcement Learning Toolkit
+Source: https://kaustubhkr.github.io/projects/reinforcement-learning.html
+
+← Flagship work (https://kaustubhkr.github.io/work.html) 03 / Learning & world models 2024–2026
+
+# World models & policy optimisation
+Built a toolkit for testing how learned dynamics and policy updates produce continuous-control behaviour.
+System RLx-Core / Reinforcement Learning Toolkit
+My contribution Learning-system architecture, algorithm implementation & model-based experiments
+Access Public implementation
+
+Engineering & evidence JAX/Flax probabilistic dynamics and MBPO experiments; PPO, SAC, TRPO Hessian–vector solvers and REDQ critic ensembles.
+Public algorithm implementations and model-based experiments; latent-world-model research documented separately.
+
+Technical deep dive Architecture, implementation & tradeoffs
+System architecture RLx-Core / Reinforcement Learning Toolkit
+
+## World models.
+Policy optimisation.
+
+World models Policy optimisation Runtime contract
+
+### World models
+Experimental work · research direction
+
+### Learn dynamics.
+Reason over futures.
+Probabilistic dynamics and model-based rollouts lead this branch of RLx-Core. JAX/Flax modules predict mean and log-variance; PPO and SAC implementations form part of the broader policy-learning toolkit. Latent-world-model research connects this work to PlaNet and Dreamer.
+
+- 01
+
+#### Collect
+(sₜ, aₜ, rₜ, sₜ₊₁) Real transitions anchor the learning problem. The MBPO scaffold separates real and model replay.
+
+- 02
+
+#### Fit dynamics
+μϕ(s,a), log σ²ϕ(s,a) The implemented Flax module has independent mean and log-variance heads.
+
+- 03
+
+#### Branch rollouts
+sₜ → ŝₜ₊₁ → … → ŝₜ₊ₖ The MBPO design uses short model-generated trajectories; rollout-length ablations are configured.
+
+- 04
+
+#### Improve policy
+real replay + model replay The intended mixed-data update closes the loop. End-to-end integration remains in progress.
+
+Modules I wrote
+
+#### Probabilistic dynamics + policy
+Dense JAX/Flax dynamics with separate mean and log-variance outputs. A tanh-squashed Gaussian policy, clipped log standard deviation and explicit PRNG splitting.
+
+Simulation work
+
+#### Franka manipulation scene
+USD scene composition, articulated joints, rigid-body props, collision and friction configuration, surface-gripper control and joint-state input.
+
+#### World-model research track
+From the RLx / RLTK roadmap
+MBPO Research track
+
+##### Short branched rollouts
+Generate short synthetic trajectories from real replay states, then use them for policy improvement.
+
+Reference ↗ (https://arxiv.org/abs/1906.08253)
+PETS Research track
+
+##### Probabilistic dynamics for planning
+Propagate model uncertainty through an ensemble and trajectory sampling when evaluating candidate actions.
+
+Reference ↗ (https://arxiv.org/abs/1805.12114)
+PlaNet Research track
+
+##### Latent-state planning
+Encode observations into a recurrent latent state, then evaluate action sequences through learned dynamics.
+
+Reference ↗ (https://arxiv.org/abs/1811.04551)
+Dreamer V1 / V2 / V3 Research track
+
+##### Learning in imagination
+Use a learned world model to improve behaviour through imagined trajectories.
+
+Reference ↗ (https://danijar.com/project/dreamerv3/)
+MuZero Research track
+
+##### A learned model for search
+Learn representations and dynamics that support reward, value and policy prediction during planning.
+
+Reference ↗ (https://arxiv.org/abs/1911.08265)
+SimPLe Research track
+
+##### Visual prediction for policy learning
+Train a video-prediction model of the environment, then use the learned simulator to improve a policy.
+
+Reference ↗ (https://arxiv.org/abs/1903.00374)
+
+The public branch contains the dynamics and policy modules, MBPO scaffolding and Isaac Sim scene work. Ensemble training, synthetic-rollout integration and full latent-agent training are further work in this track.
+Model-based branch ↗ (https://github.com/kaustubhkr/reinforcement-learning-toolkit/tree/main/phase_06_model_based/1_MBPO) Research roadmap ↗ (https://github.com/kaustubhkr/reinforcement-learning-toolkit#algorithms--roadmap-phases)
+
+### Policy optimisation
+Implemented algorithm core
+
+### The update is
+part of the system.
+Curvature, target bias and data reuse are explicit in these implementations. The interesting part is what happens between collecting a transition and accepting a new policy.
+
+PPO / On-policy
+
+#### Clipped probability-ratio objective
+Gaussian policy, clipped surrogate, entropy regularisation, minibatch epochs, separate value regression and gradient-norm clipping.
+
+SAC / Off-policy
+
+#### Entropy-regularised actor–critic
+Twin Q networks, a stochastic Gaussian actor, replay-buffer updates, a target value network and learned entropy temperature.
+
+TRPO / Trust region
+
+#### Curvature without a dense Hessian
+
+(H KL + λI) Δθ = g Hessian–vector products + conjugate gradients
+
+- 01
+
+#### Differentiate
+g = ∇θ L(θ) Flatten autograd derivatives of the policy-ratio surrogate.
+
+- 02
+
+#### Solve
+v → Hₖₗv + λv Differentiate the gradient–vector product; solve iteratively with residual-based termination.
+
+- 03
+
+#### Scale
+½ ΔθᵀHΔθ ≤ δ Scale the candidate step using the KL curvature estimate.
+
+- 04
+
+#### Accept / revert
+KL budget ∧ improvement Backtrack until the surrogate improves inside the trust region; restore the old parameters if no candidate passes.
+
+REDQ / Critic ensemble
+
+#### Reuse experience without one critic owning the target
+
+Q 1 Q 2 Q 3 Q 4 Q 5 Q 6 Q 7 Q 8 Q 9 Q 10
+Illustrative subset selection: two critics contribute to the target minimum; the policy objective uses the ensemble mean.
+10 Critic networks
+2 Target subset
+20 Configured UTD
+
+Randomise the target subset, regress the critic ensemble, optimise the policy against the mean Q estimate, learn the entropy temperature, then softly update the target networks.
+
+PPO implementation ↗ (https://github.com/kaustubhkr/reinforcement-learning-toolkit/tree/main/phase_04_pg/4_ppo/PPO) SAC implementation ↗ (https://github.com/kaustubhkr/reinforcement-learning-toolkit/tree/main/phase_05_actor_critic/2_sac/SAC) TRPO update and line search ↗ (https://github.com/kaustubhkr/reinforcement-learning-toolkit/tree/main/phase_04_pg/3_trpo/trpo) REDQ implementation ↗ (https://github.com/kaustubhkr/reinforcement-learning-toolkit/tree/main/phase_05_actor_critic/3_redq/REDQ)
+
+### Runtime contract
+Deployment architecture · specified in README
+
+### A policy export
+is a control interface.
+The industrial design carries a trained policy into an inference-only runtime with declared shapes, normalisation, action bounds, timing and fallback responsibilities.
+
+- 01
+
+#### Train
+Python / JAX → frozen parameters Version the experiment, data assumptions and policy checkpoint.
+
+- 02
+
+#### Package
+model.onnx + metadata.json Bind the exported graph to the observation/action contract and model hash.
+
+- 03
+
+#### Execute
+acquire → normalise → infer A fixed-tick C++20 runtime with preallocated working buffers is the target execution design.
+
+- 04
+
+#### Constrain
+clamp → rate / jerk → action Monitor validity and timing; signal the classical-control path when takeover is required.
+
+#### What travels with the model
+abi_version · dimensions Interface version, obs_dim and act_dim define compatibility.
+obs_norm · preprocess The runtime receives the same normalisation and preprocessing used in training.
+act_bounds · tick_hz Action limits and the expected control period are explicit.
+training_commit · onnx_sha256 The binary resolves to a particular training revision and content hash.
+kpi_ref · license Evaluation context and usage terms travel with the artifact.
+
+#### How the learned policy gets control authority
+Shadow Residual Primary Cooperative
+
+### Shadow
+u = u classical The learned policy observes and logs counterfactual actions. The classical controller retains command authority.
+Compare proposed actions with the actual execution before handover.
+
+### Residual
+u = guard(u classical + Δu policy ) The learned policy contributes a bounded correction over the classical controller. The combined command passes through the actuator envelope.
+Bound the residual and define the trigger for returning to the classical controller.
+
+### Primary
+u = guard(u policy ) The learned policy supplies the main action within the declared execution envelope. Deadline, novelty and input monitors can request fallback.
+Control authority depends on runtime validity and a defined takeover path.
+
+### Cooperative
+u = guard(blend(u classical , u policy )) A scheduler coordinates the contribution of classical and learned policies. Blending and transitions become explicit parts of the controller design.
+The scheduler owns the handover; actuator constraints still apply to the result.
+
+README acceptance targets Python/C++ parity ≤ 10⁻⁵ L∞; p95 inference ≤ 2 ms on reference hardware; zero post-init allocations; no missed ticks at the target rate; comparison against a classical baseline.
+These are design gates for the deployment track, not reported benchmark results.
+Deployment model contract ↗ (https://github.com/kaustubhkr/reinforcement-learning-toolkit#deployment-model-contract) Related C++ control implementation ↗ (https://github.com/kaustubhkr/industrial-control-toolkit)
+
+01 / Experimental implementation
+
+## Model-based learning & simulation
+
+- Wrote JAX/Flax dynamics and stochastic-policy modules. The dynamics network returns separate mean and log-variance predictions; the policy uses a tanh-squashed Gaussian with clipped log standard deviation and explicit random-key handling.
+
+- Set up the MBPO architecture around separate real and model replay paths, rollout-length configurations and ablation scripts. The integrated ensemble training and model-rollout loop remain experimental work.
+
+- Built a Franka manipulation scene in Isaac Sim with USD assets, articulated joints, rigid-body props, collision and friction configuration, surface-gripper control and joint-state input.
+
+02 / Implementation
+
+## Second-order policy optimisation
+
+- Implemented the TRPO policy-ratio surrogate, flattened autograd gradients and conjugate-gradient solving with residual-based termination.
+
+- Computed damped KL Hessian–vector products through higher-order autograd, avoiding explicit construction of a dense Hessian.
+
+- Scaled the candidate step to a KL budget, backtracked for surrogate improvement, and restored the previous parameters when no step passed.
+
+- Implemented PPO with Gaussian action log probabilities, minibatched clipped ratios, entropy regularisation, value regression and gradient clipping.
+
+03 / Implementation
+
+## Ensemble value estimation & experience reuse
+
+- Implemented REDQ with 10 critics, a random 2-critic target subset and a configured update-to-data ratio of 20.
+
+- Used the subset minimum for target estimation, the ensemble mean in the policy objective, learned entropy temperature and soft target updates.
+
+- Built TD3, SAC and value-learning implementations spanning Double/Dueling DQN, prioritised replay and Rainbow, alongside tabular planning, Dyna-Q and prioritised sweeping.
+
+04 / Research direction
+
+## From learned dynamics to industrial world models
+
+- The RLx-Core and RLTK roadmaps extend model-based control through MBPO, PETS and PlaNet into Dreamer V1/V2/V3, MuZero and SimPLe.
+
+- The industrial research questions include long-horizon manipulation, partially observed machine state, failure prediction, experience reuse and adaptation across tasks.
+
+- The wider programme includes offline and imitation learning, hierarchical skills, multi-agent coordination, sequence-model policies, robust sim-to-real transfer and risk-sensitive control.
+
+- The deployment design binds a policy to observation normalisation, actuator bounds, model identity, timing assumptions and Shadow, Residual, Primary or Cooperative operating modes.
+
+Engineering note
+
+## Prediction becomes useful when it changes a control decision.
+A world model needs to retain the dynamics that matter for action: contact, timing, hidden state and how errors compound over a rollout. That connects the research back to controller design. The policy needs a useful imagined future; the runtime still needs an action it can execute, a deadline it can meet and a defined response when its assumptions fail.
+
+Project context Implemented policy and value-learning families; experimental model-based modules and simulation work; world-model and industrial deployment research. The interactive architecture shows the implementation and research layers explicitly.
+Source on GitHub ↗ (https://github.com/kaustubhkr/reinforcement-learning-toolkit) Model-based experiments ↗ (https://github.com/kaustubhkr/reinforcement-learning-toolkit/tree/main/phase_06_model_based/1_MBPO)
+
+Keep exploring
+
+## Control, down to the tick.
+↗ (https://kaustubhkr.github.io/projects/control-runtime.html) C++ control runtime
+
+---
+
+# C++ control runtime
+Source: https://kaustubhkr.github.io/projects/control-runtime.html
+
+← Flagship work (https://kaustubhkr.github.io/work.html) 04 / Control engineering 2025–2026
+
+# Measured C++ control
+Built a C++20 control core with explicit actuator limits and state-consistent controller switching.
+System C++ control runtime
+My contribution Control-library design & implementation
+Access Public implementation
+
+Engineering & evidence Arena-backed controller state, bumpless transfer and timing sweeps over 1–64 channels.
+Recorded position response settles within ±2% at 342 ms in a simulated integrator plant. Response plots, percentiles and source CSVs are public.
+
+Recorded measurements
+
+## Control response.
+Execution cost.
+Position tracking, cascade response and controller-update timing from the toolkit’s recorded CSV artifacts.
+Step response Latency
+
+### Step response
+
+Image: Position response and applied command across 1000 samples, including the setpoint and 2 percent settling band (https://kaustubhkr.github.io/assets/control-response.svg)
+Position-control example · 1 ms model step · 1,000 samples. Recorded response enters and stays in the ±2% band at 342 ms. This is a simulated integrator plant.
+
+Image: Cascade position and velocity response with the applied actuator command (https://kaustubhkr.github.io/assets/control-cascade.svg)
+Cascade example · 1 ms model step · 1,000 samples. Position overshoot 0.0904%; ±2% settling at 420 ms.
+
+Position CSV ↓ (https://kaustubhkr.github.io/evidence/pid-position.csv) Cascade CSV ↓ (https://kaustubhkr.github.io/evidence/pid-cascade.csv) Plant & controller configuration ↗ (https://github.com/kaustubhkr/industrial-control-toolkit/blob/main/examples/pid/pid_position_control.cpp)
+
+### Latency
+
+Image: Recorded p50 p95 and p99 nanoseconds per update for 1 4 8 16 32 and 64 channels, showing both recorded sweeps (https://kaustubhkr.github.io/assets/control-latency.svg)
+Raw PID + loop + timer measurements from both recorded sweeps. Each record summarises 200,000 timing batches, with 64 updates per batch after 10,000 warm-up updates.
+
+This is an amortised update microbenchmark, not scheduler jitter or end-to-end robot latency. Hardware identity and run flags are absent from the CSV. The two recorded sweeps are shown separately; neither is labelled as a safety-on/off comparison.
+Exact recorded percentiles
+Sweep | Channels | p50 ns | p95 ns | p99 ns | p99.9 ns |
+A | 1 | 51.188 | 52.469 | 65.391 | 76.453 |
+A | 4 | 161.922 | 196.578 | 224.828 | 262.828 |
+A | 8 | 294.859 | 330.453 | 356.469 | 426.766 |
+A | 16 | 578.672 | 638.422 | 698.125 | 823.578 |
+A | 32 | 1130.094 | 1267.703 | 1332.922 | 1566.734 |
+A | 64 | 2297.484 | 2576.203 | 2643.047 | 3201.656 |
+B | 1 | 56.484 | 63.203 | 74.125 | 92.547 |
+B | 4 | 173.578 | 191.141 | 210.203 | 251.016 |
+B | 8 | 318.266 | 424.547 | 471.344 | 491.781 |
+B | 16 | 629.359 | 705.469 | 830.547 | 941.734 |
+B | 32 | 1259.109 | 1411.266 | 1486.062 | 1839.609 |
+B | 64 | 2508.844 | 2809.562 | 2860.547 | 3436.656 |
+
+Original benchmark CSV ↓ (https://kaustubhkr.github.io/evidence/pid-benchmark.csv) Benchmark method ↗ (https://github.com/kaustubhkr/industrial-control-toolkit/blob/main/benchmarks/runners/bench_pid_vs_baseline.cc)
+
+Technical deep dive Architecture, implementation & tradeoffs
+System architecture C++20 / fixed-period control
+
+### The actuator limit feeds back into state.
+
+- 01
+
+#### Compute
+u_raw = P + I + D + FF Setpoint weighting, gain scheduling and Tustin-discretised derivative filtering.
+
+- 02
+
+#### Constrain
+saturate → rate → jerk Preserve each stage’s effect and the final applied command.
+
+- 03
+
+#### Reconcile
+u_applied − u_raw Feed constraint error into anti-windup; align internal state on transfer.
+
+- 04
+
+#### Supervise
+health + watchdog Track timing, limiting hits and fallback state with the output.
+
+↖ Applied command → anti-windup correction → next integrator state. The controller’s memory follows what the actuator was allowed to do.
+Lifecycle Initialise → start → update → stop / reset
+Memory Arena-allocated workspaces reused on the update path
+Recording JSONL · MCAP · FlatBuffers · integrity checks
+
+01 / Implementation
+
+## Execution architecture
+
+- Allocated working buffers from a memory arena during initialisation and reused them on the update path.
+
+- Defined controller dimensions, start/stop/reset lifecycle, measurement-validity masks, fixed-tick timing and runtime health.
+
+- Preserved the unconstrained and constrained commands separately so each limiting stage can report its effect.
+
+02 / Implementation
+
+## Control and constraints
+
+- Implemented setpoint weighting, feedforward bias and a filtered derivative with Tustin discretisation.
+
+- Added gain scheduling over configured breakpoints, with interpolation of gains and weights.
+
+- Composed saturation, slew-rate and jerk constraints before anti-windup, plus bumpless state alignment and watchdog/fallback components.
+
+03 / Implementation
+
+## Inspectability
+
+- Included checks for derivative kick, bumpless transfer, saturation, rate and jerk behaviour, scheduling and deterministic execution.
+
+- Built JSONL and MCAP evidence-recorder paths, a FlatBuffers schema, hash/round-trip checks and example traces.
+
+- Kept runtime health attached to the output: deadline misses, clamp magnitudes, limiting hits and anti-windup correction magnitude.
+
+Engineering note
+
+## The integrator must see the command that survives the constraints.
+A controller can request far more than an actuator is allowed to deliver. Updating its internal state as though the raw request was executed creates a mismatch. The core preserves both values and feeds their difference into the anti-windup path after saturation, rate and jerk limiting.
+
+Project context The implemented controller family is PID/IMC-PID. Broader controllers described in the repository roadmap are ongoing work.
+Source on GitHub ↗ (https://github.com/kaustubhkr/industrial-control-toolkit)
+
+Keep exploring
+
+## One world. Multiple robots.
+↗ (https://kaustubhkr.github.io/projects/multi-robot-runtime.html) Multi-robot autonomy runtime
+
+---
+
+# Multi-robot autonomy runtime
+Source: https://kaustubhkr.github.io/projects/multi-robot-runtime.html
+
+← Flagship work (https://kaustubhkr.github.io/work.html) 05 / Industrial robotics 2025–2026
+
+# Coordinated robot execution
+Built a simulation runtime that keeps robot localisation, command ownership and mission state consistent.
+System Multi-robot autonomy runtime
+My contribution AviRob · system architecture & implementation
+Access Private implementation
+
+Engineering & evidence Namespaced AMCL, dual-LiDAR merging, frame-authority checks and freshness-gated velocity arbitration.
+Private simulation-development runtime; deterministic scenario recording. No certified safety function is claimed.
+
+Media: https://kaustubhkr.github.io/assets/avirob-isaac-sim.mp4
+AviRob · three-robot warehouse demo in Isaac Sim · silent. Simulation footage from the original AviRob deck.
+
+Technical deep dive Architecture, implementation & tradeoffs
+System architecture ROS 2 Jazzy / command authority
+
+### One map. Three localisation owners.
+
+- 01
+
+#### Localise
+map → rᵢ/odom → rᵢ/base Independent AMCL instances, initial-pose bootstrapping and world-to-map calibration.
+
+- 02
+
+#### Resolve
+TF ownership + freshness Detect competing transform publishers; expire stale sources after restart.
+
+- 03
+
+#### Arbitrate
+raw intent → command gate Combine mode, stop, interlock, warning and deliberate-restart state.
+
+- 04
+
+#### Record
+final command + episode A defined publisher owns motion output; rosbag2 captures the scenario and its inputs.
+
+↖ A plausible transform is insufficient if its publisher has lost authority. Freshness and ownership are checked at both the frame and motion boundaries.
+Sensors Front / rear LiDAR merging with explicit frame alignment
+Stop path A stale or blocking input prevents motion permission
+Reproduction Scenario, signal contracts, simulation clock and artifacts
+
+01 / Implementation
+
+## Localisation and frame ownership
+
+- Configured one shared map with three separately namespaced AMCL instances and per-robot initial-pose bootstrapping.
+
+- Merged front and rear laser scans for the applicable robot and provided configurable sensor-frame alignment.
+
+- Implemented TF chain validation and publisher-conflict tracking, including expiry of stale sources after restarts.
+
+- Added world-to-map calibration tools so initial poses and geometry share a declared reference frame.
+
+02 / Implementation
+
+## Authority over motion
+
+- Separated raw motion intent from the final command publisher in the evidence-mode runtime.
+
+- Implemented deterministic command-gate logic for stale stop, mode, interlock and warning inputs.
+
+- Represented active stops, deliberate-restart requirements, charger contacts, load state, doors, portals and prestart warnings as explicit inputs to arbitration.
+
+03 / Implementation
+
+## Repeatable physical-system experiments
+
+- Built mission and fork-adapter components, deterministic scenario models and a scenario runner.
+
+- Recorded rosbag2 episodes with artifact bundles and declared signal contracts.
+
+- Checked topics, frames, publisher ownership, timestamps and freshness at the interface between simulation and the runtime.
+
+Engineering note
+
+## A coordinate transform also has an owner.
+Two publishers can produce individually plausible transforms while making the combined system inconsistent. The runtime tracks the active sources for monitored frame pairs, expires stale publishers, and reports competing authority. The same ownership discipline applies to final velocity commands.
+
+Project context A simulation-development runtime. Protective-device and PLC models here are development components, not certified machine-safety functions.
+
+Keep exploring
+
+## Reconstruct what happened.
+↗ (https://kaustubhkr.github.io/projects/machine-evidence.html) Machine evidence compiler
+
+---
+
+# Machine evidence compiler
+Source: https://kaustubhkr.github.io/projects/machine-evidence.html
+
+← Flagship work (https://kaustubhkr.github.io/work.html) 06 / AviRob / industrial systems 2025–2026
+
+# Robot logs into traceable evidence
+Built a compiler that reconciles fragmented robot and controller logs into one replayable timeline, with each observation traceable to its source.
+System Machine evidence compiler
+My contribution Founder · architecture, implementation & industrial discovery
+Access Private implementation
+
+Engineering & evidence VDA 5050/MQTT, OPC UA, SICK scan3 UDP and MCAP/rosbag2; datagram reassembly and clock alignment.
+Private implementation. The ROSCon India 2025 talk explains the AMR/AGV evidence architecture.
+
+Technical deep dive Architecture, implementation & tradeoffs
+System architecture Industrial recordings / compilation
+
+### Every value carries its origin.
+
+- 01
+
+#### Preserve
+raw bytes + source identity Retain source recordings before protocol decoding or interpretation.
+
+- 02
+
+#### Decode
+frames → canonical values Map fields, track sequence gaps, duplicates, reordering, resets and incomplete fragments.
+
+- 03
+
+#### Align
+time basis + source authority Carry timestamp quality, source class, confidence and derivation into the timeline.
+
+- 04
+
+#### Compile
+run bundle + replay Package canonical records, quality summaries and provenance for repeatable analysis.
+
+↖ Preserved source → versioned interpretation → reproducible bundle. A new mapping can revisit the same recording without rewriting what was observed.
+Inputs File logs · MCAP / rosbag2 · MQTT / OPC UA intake
+Value contract Observed value + timing + quality + provenance
+Failure path Integrity failures remain visible through quarantine and quality state
+
+01 / Implementation
+
+## Source ingestion
+
+- Implemented file intake, raw recording storage and queued ingest/compile workflows.
+
+- Built source-pack and mapping contracts for robot context, scanners, controller diagnostics and reference measurements.
+
+- Built VDA 5050/MQTT and read-only OPC UA intake, SICK scan3 UDP datagram parsing and reassembly, picoScan REST capture, Flexi Soft gateway inputs, and MCAP/rosbag2 file ingestion.
+
+02 / Implementation
+
+## Temporal integrity
+
+- Tracked sequence gaps, duplicate events, reordering, resets, incomplete fragments and stale data.
+
+- Preserved timing basis and alignment quality rather than treating every received timestamp as equivalent.
+
+- Retained source class, confidence, derivation and provenance alongside canonical observed values.
+
+03 / Implementation
+
+## Compilation and replay
+
+- Compiled run bundles with canonical timelines, events, quality summaries and reference-channel assessments.
+
+- Separated raw recording from interpretation so an episode can be revisited as mappings evolve.
+
+- Built integrity/quarantine handling, stable export surfaces and operational reports for downstream analysis.
+
+Engineering note
+
+## A value without its origin can be the wrong evidence.
+A fleet report, a diagnostic channel and an independent physical measurement can all describe motion while supporting different conclusions. The compiler keeps the source semantics and transformation history attached to the value so downstream analysis can decide what the observation is sufficient to establish.
+
+Project context Selected technical description of private work. The compiler produces canonical evidence bundles; behavioural verdicts belong to the downstream engine.
+
+Keep exploring
+
+## Make the conclusion traceable.
+↗ (https://kaustubhkr.github.io/projects/verification-engine.html) Geometric verification engine
+
+---
+
+# Geometric verification engine
+Source: https://kaustubhkr.github.io/projects/verification-engine.html
+
+← Flagship work (https://kaustubhkr.github.io/work.html) 07 / AviRob / geometry & verification 2025–2026
+
+# Geometry-backed verification
+Built an engine that checks recorded machine behaviour against site geometry and traces each finding to its observations.
+System Geometric verification engine
+My contribution Founder · analysis-engine design & implementation
+Access Private implementation
+
+Engineering & evidence Point-in-polygon and clearance queries, bounded temporal alignment and evidence-gated interlock validators.
+Private implementation. PASS, FAIL or NOT_VERIFIABLE findings; engineering analysis, not certification.
+
+Technical deep dive Architecture, implementation & tradeoffs
+System architecture Temporal geometry / behavioural evidence
+
+### State × time × geometry → finding
+
+- 01
+
+#### Align
+bounded hold-last Build analysis ticks while retaining gaps, event windows and freshness.
+
+- 02
+
+#### Ground
+site model + robot footprint Compute polygon membership, direction of travel and clearance to nearby structures.
+
+- 03
+
+#### Gate
+required evidence → validator Resolve dependencies before evaluating speed, warnings, restart or interlocks.
+
+- 04
+
+#### Explain
+verdict + source window Attach reason codes, severity and provenance to PASS, FAIL or NOT_VERIFIABLE.
+
+↖ Missing, stale or insufficient observations propagate to NOT_VERIFIABLE. The finding preserves the exact physical context that made the rule applicable.
+Geometry Versioned site model and robot specification
+Temporal rule A stale sample cannot silently become fresh evidence
+Output Finding + evidence window + original source pointers
+
+01 / Implementation
+
+## Temporal and geometric context
+
+- Constructed analysis timelines with bounded hold-last behaviour, stale-gap handling and event attachment.
+
+- Derived motion, standstill and transition context while retaining timing and evidence quality.
+
+- Implemented deterministic polygon-based zone membership, direction-of-travel context, directional clearances and nearest-structure distance.
+
+- Bound geometry to declared site-model and robot-specification versions.
+
+02 / Implementation
+
+## Behavioural checks
+
+- Implemented validator dependencies and central evidence gating.
+
+- Built checks for muting speed, zone-dependent speed, restart discipline, prestart/motion warnings, charging interlocks and load-secure motion prevention.
+
+- Assembled findings with evidence windows, reason codes, severity and provenance pointers.
+
+03 / Implementation
+
+## Missing evidence has a defined result
+
+- Distinguished directly observed state from inferred state in the validator inputs.
+
+- Carried missingness, staleness and integrity status through the analysis rather than manufacturing a successful result.
+
+- Used PASS, FAIL and NOT_VERIFIABLE to keep the conclusion consistent with the available evidence.
+
+Engineering note
+
+## Geometry and timing change the meaning of the same speed.
+A velocity sample is only one input. The relevant zone, the direction of travel, the active machine state and the freshness of each observation determine whether a specific behaviour can be evaluated. The engine composes these contexts and retains the original source window for review.
+
+Project context Engineering evidence analysis. It does not confer certification or replace an independent machine-safety assessment.
+Related ROSCon India talk ↗ (https://www.youtube.com/watch?v=8RZy6ztm5Wg)
+
+Keep exploring
+
+## A learned policy. A closed control loop.
+↗ (https://kaustubhkr.github.io/projects/autonomous-racing.html) ICRA autonomous racing / AutoDRIVE
+
+---
+
+# Visual autonomous driving
+Source: https://kaustubhkr.github.io/projects/visual-driving.html
+
+← Experiments & archive (https://kaustubhkr.github.io/archive.html) 08 / Robot learning 2024–2026
+
+# Learning to drive from vision
+Built expert-data collection and visual imitation learning, then reused the learned features in continuous-control training.
+System Visual autonomous driving
+My contribution Data pipeline, model integration & training system
+Access Public implementation
+
+Engineering & evidence CARLA environments, image and vehicle-state fusion, actor–critic training and checkpoint recovery.
+Public simulation work; physical deployment is documented separately in the golf-cart project.
+Physical golf-cart deployment ↗ (https://kaustubhkr.github.io/projects/golf-cart.html)
+
+Technical deep dive Architecture, implementation & tradeoffs
+System architecture CARLA / representation transfer
+
+### Demonstrations become control features.
+
+- 01
+
+#### Observe
+RGB + additional channels Five-channel input representation paired with expert controls.
+
+- 02
+
+#### Imitate
+visual features → control heads Transfer RGB features and train steering, throttle and brake predictions.
+
+- 03
+
+#### Reuse
+checkpoint feature extractor Carry the learned visual representation into an interaction-based agent.
+
+- 04
+
+#### Improve
+visual features + vehicle state Condition SAC on perception features and low-dimensional vehicle state.
+
+↖ A checkpoint is also a reusable representation. The next experiment asks what interaction can add to features first learned from expert driving.
+Learning stages Supervised imitation → representation reuse → actor–critic
+Control Steering, throttle and brake predictions
+Temporal scope The current recurrent path receives a single timestep
+
+01 / Implementation
+
+## Observation to control
+
+- Adapted the visual model to five input channels while retaining pretrained RGB weights for the first three.
+
+- Used separate steering, throttle and brake heads for the imitation path.
+
+- Built the CARLA environment interface and the observation/action plumbing for interactive training.
+
+02 / Implementation
+
+## Representation reuse
+
+- Loaded the imitation checkpoint into a custom feature extractor and removed the final control-regression heads.
+
+- Combined the extracted visual representation with state inputs through a learned projection.
+
+- Integrated the extractor with Stable-Baselines3 SAC and separate policy/critic networks.
+
+03 / Implementation
+
+## The experiment infrastructure
+
+- Implemented checkpoint discovery and resume logic, evaluation and monitoring utilities.
+
+- Added multi-environment training paths and tools for recovering interrupted experiments.
+
+- Kept collected demonstrations, imitation models and interactive-learning experiments in the same development trail.
+
+04 / Implementation
+
+## Private control extensions
+
+- Extended the autonomous-driving work with MPCC comparison, modified PPO/SAC and a multi-head attention encoder.
+
+- Used the same methods in the physical golf-cart work, including an RL adapter and industrial-control integration. These extensions are maintained separately from the public CARLA repository.
+
+Engineering note
+
+## Transfer the representation; inspect the control problem again.
+A representation learned from expert examples supplies a useful starting point, but interactive training changes the observations the agent encounters. The pipeline makes the feature-transfer boundary explicit so the demonstration model, state inputs and actor–critic objective can be inspected separately.
+
+Project context CARLA simulation work with separate private MPCC, modified PPO/SAC and attention-encoder extensions. The related physical golf-cart case study covers the vehicle deployment.
+Source on GitHub ↗ (https://github.com/kaustubhkr/Self_Driving_Car)
+
+Keep exploring
+
+## A memory system I can run.
+↗ (https://kaustubhkr.github.io/projects/personal-os.html) Personal OS
+
+---
+
+# Personal OS
+Source: https://kaustubhkr.github.io/projects/personal-os.html
+
+← Experiments & archive (https://kaustubhkr.github.io/archive.html) 09 / Native systems / local inference 2026
+
+# Local speech & working memory
+Built a native macOS application for recording, transcribing and retrieving working context locally.
+System Personal OS
+My contribution Native application & local inference architecture
+Access Private implementation
+
+Engineering & evidence AudioQueue and ScreenCaptureKit capture, 20 ms PCM input, bounded model workers and SQLite-backed retrieval.
+Private native application. Device-dependent capture and dictation require separate validation.
+
+Technical deep dive Architecture, implementation & tradeoffs
+System architecture Native macOS / local inference
+
+### Capture keeps running while models decode.
+
+- 01
+
+#### Capture
+AudioQueue · 20 ms PCM A native 16 kHz audio path captures and buffers continuously.
+
+- 02
+
+#### Separate
+screen audio ≠ microphone ScreenCaptureKit and microphone capture retain independent stream paths.
+
+- 03
+
+#### Decode
+bounded workers + GPU gate Provisional transcription updates quickly; a separate final pass revisits the recording.
+
+- 04
+
+#### Remember
+lossless chunks → SQLite Persist recordings and local memory for later reconstruction.
+
+↖ Capture → durable audio → provisional text → final decode. Transcript revision does not require losing or recapturing the original signal.
+Concurrency Audio callbacks are separate from inference work
+Scheduling Bounded local workers with serialised GPU work
+Recovery Retained audio supports independent final decoding
+
+01 / Implementation
+
+## Capture and inference lifecycle
+
+- Implemented separate paths for AudioQueue dictation and ScreenCaptureKit system-audio plus microphone capture.
+
+- Used 20 ms PCM callbacks and rolling lossless 16 kHz mono audio files for dictation.
+
+- Built provisional phrase decoding followed by an independent quality pass over the original audio.
+
+02 / Implementation
+
+## Resource and failure handling
+
+- Bound the number of loaded model workers and serialized GPU inference requests.
+
+- Kept microphone startup independent of remote-backend discovery and model loading.
+
+- Preserved provisional text when finalisation fails, with explicit microphone-open, first-audio, first-text and stop-to-final timings.
+
+03 / Implementation
+
+## Personal memory
+
+- Built local multilingual transcription and speaker-aware processing around existing speech models.
+
+- Added SQLite-backed memory, retrieval, correction handling and optional backend-routing contracts.
+
+- Made capture, transcription, storage and action boundaries visible in the native application.
+
+Engineering note
+
+## Latency is a sequence of boundaries.
+The time before useful text appears includes opening the input device, receiving the first real samples, accumulating context and scheduling inference. I separated those stages so a slow device open does not disappear inside a single transcription-time number.
+
+Project context Actively developed native application. Hardware-dependent capture and cross-application actions have their own device-validation requirements.
+
+Keep exploring
+
+## Access with an expiry.
+↗ (https://kaustubhkr.github.io/projects/private-compute.html) Private compute workspaces
+
+---
+
+# Private compute workspaces
+Source: https://kaustubhkr.github.io/projects/private-compute.html
+
+← Experiments & archive (https://kaustubhkr.github.io/archive.html) 10 / Infrastructure experiment 2026
+
+# Bounded access to private compute
+Built a prototype for granting temporary workstation access with explicit session ownership and revocation.
+System Private compute workspaces
+My contribution Control-plane prototype & access workflow
+Access Private implementation
+
+Engineering & evidence Host heartbeats, expiring invitations and connect, disconnect and revoke transitions around existing streaming endpoints.
+Private validation prototype; no new display protocol or enterprise security qualification is claimed.
+
+Technical deep dive Architecture, implementation & tradeoffs
+System architecture Private compute / session lifecycle
+
+### Host presence is not session authority.
+
+- 01
+
+#### Register
+host identity + heartbeat Track whether a compute host is present and available.
+
+- 02
+
+#### Invite
+expiring access Bind a session invitation to a limited validity window.
+
+- 03
+
+#### Connect
+authorised streaming session Coordinate session access around an existing streaming layer.
+
+- 04
+
+#### Revoke
+expiry + audit End authority explicitly and retain session events.
+
+↖ A live heartbeat does not renew an expired invitation. Host availability and a user’s authority to connect remain separate state.
+Control plane Host registration, presence and invitation state
+Lifecycle Invite → connect → expire / revoke
+Boundary Session orchestration around an existing streaming protocol
+
+01 / Implementation
+
+## Control-plane mechanics
+
+- Registered hosts and ingested heartbeat metrics through an optional host agent.
+
+- Created expiring invitation sessions with a browser entry point and existing stream endpoint.
+
+- Implemented connect, disconnect and revoke transitions with event history.
+
+02 / Implementation
+
+## Access policy
+
+- Denied file transfer by default at the workflow-policy level.
+
+- Kept the lifetime of access explicit instead of distributing permanent machine access.
+
+- Provided administration surfaces for hosts, sessions, policies and audit events.
+
+Engineering note
+
+## Session authority is its own system.
+A remote-display stream solves one part of remote compute. This prototype explores the surrounding lifecycle: which host is available, who has an invitation, when that invitation expires, and what happens after revocation.
+
+Project context A validation MVP around an existing streaming system. It does not implement a new display protocol or claim enterprise security qualification.
+
+Keep exploring
+
+## Demonstration to interaction.
+↗ (https://kaustubhkr.github.io/projects/visual-driving.html) Visual autonomous driving
+
+END OF FULL PORTFOLIO CONTEXT

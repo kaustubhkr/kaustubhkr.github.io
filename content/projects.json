@@ -69,7 +69,13 @@
         "Official competition results",
         "https://autodrive-ecosystem.github.io/competitions/roboracer-sim-racing-icra-2025/#results"
       ]
-    ]
+    ],
+    "review": {
+      "title": "Autonomous racing at ICRA",
+      "outcome": "Built the controller that placed third in ICRA 2025 simulation qualification: 81.32 seconds, zero collisions.",
+      "mechanism": "MPCC comparison, modified PPO and SAC, multi-head attention encoding and a ROS 2 training-to-control pipeline.",
+      "evidence": "Official results and qualification footage. Sole builder; final time-attack placement: 14th."
+    }
   },
   {
     "id": "golf-cart",
@@ -119,7 +125,13 @@
     "noteTitle": "The adapter is part of the controller.",
     "note": "A trained policy needs a path into the physical control system. My work included that integration: the RL adapter, industrial controls and deployment on the vehicle, alongside the learning and classical-control methods.",
     "boundary": "An independent autonomous-vehicle project, developed through CARLA experiments and deployed on a physical golf cart. The implementation is private.",
-    "links": []
+    "links": [],
+    "review": {
+      "title": "Autonomy on a physical golf cart",
+      "outcome": "Deployed a learned-control stack on a physical golf cart, connecting an RL adapter to the vehicle’s industrial controls.",
+      "mechanism": "MPCC comparison, modified PPO and SAC, and multi-head attention encoding, developed alongside CARLA experiments.",
+      "evidence": "Private implementation. A separate vehicle project from the ICRA simulation entry."
+    }
   },
   {
     "id": "reinforcement-learning",
@@ -137,7 +149,7 @@
     "bullets": [
       "JAX/Flax probabilistic dynamics, MBPO experiments and latent world-model research.",
       "PPO clipped-surrogate updates, SAC twin critics and entropy tuning, TRPO Hessian–vector solvers.",
-      "JAX/Flax dynamics modules, Isaac Sim manipulation and a world-model research programme."
+      "REDQ critic ensembles and Isaac Sim manipulation, with experiment modules and runtime contracts."
     ],
     "tags": [
       "World models",
@@ -203,7 +215,13 @@
       "Implementation",
       "Implementation",
       "Research direction"
-    ]
+    ],
+    "review": {
+      "title": "World models & policy optimisation",
+      "outcome": "Built a toolkit for testing how learned dynamics and policy updates produce continuous-control behaviour.",
+      "mechanism": "JAX/Flax probabilistic dynamics and MBPO experiments; PPO, SAC, TRPO Hessian–vector solvers and REDQ critic ensembles.",
+      "evidence": "Public algorithm implementations and model-based experiments; latent-world-model research documented separately."
+    }
   },
   {
     "id": "control-runtime",
@@ -265,7 +283,13 @@
     "noteTitle": "The integrator must see the command that survives the constraints.",
     "note": "A controller can request far more than an actuator is allowed to deliver. Updating its internal state as though the raw request was executed creates a mismatch. The core preserves both values and feeds their difference into the anti-windup path after saturation, rate and jerk limiting.",
     "boundary": "The implemented controller family is PID/IMC-PID. Broader controllers described in the repository roadmap are ongoing work.",
-    "links": []
+    "links": [],
+    "review": {
+      "title": "Measured C++ control",
+      "outcome": "Built a C++20 control core with explicit actuator limits and state-consistent controller switching.",
+      "mechanism": "Arena-backed controller state, bumpless transfer and timing sweeps over 1–64 channels.",
+      "evidence": "Recorded position response settles within ±2% at 342 ms in a simulated integrator plant. Response plots, percentiles and source CSVs are public."
+    }
   },
   {
     "id": "multi-robot-runtime",
@@ -327,7 +351,13 @@
     "noteTitle": "A coordinate transform also has an owner.",
     "note": "Two publishers can produce individually plausible transforms while making the combined system inconsistent. The runtime tracks the active sources for monitored frame pairs, expires stale publishers, and reports competing authority. The same ownership discipline applies to final velocity commands.",
     "boundary": "A simulation-development runtime. Protective-device and PLC models here are development components, not certified machine-safety functions.",
-    "links": []
+    "links": [],
+    "review": {
+      "title": "Coordinated robot execution",
+      "outcome": "Built a simulation runtime that keeps robot localisation, command ownership and mission state consistent.",
+      "mechanism": "Namespaced AMCL, dual-LiDAR merging, frame-authority checks and freshness-gated velocity arbitration.",
+      "evidence": "Private simulation-development runtime; deterministic scenario recording. No certified safety function is claimed."
+    }
   },
   {
     "id": "machine-evidence",
@@ -388,7 +418,13 @@
     "noteTitle": "A value without its origin can be the wrong evidence.",
     "note": "A fleet report, a diagnostic channel and an independent physical measurement can all describe motion while supporting different conclusions. The compiler keeps the source semantics and transformation history attached to the value so downstream analysis can decide what the observation is sufficient to establish.",
     "boundary": "Selected technical description of private work. The compiler produces canonical evidence bundles; behavioural verdicts belong to the downstream engine.",
-    "links": []
+    "links": [],
+    "review": {
+      "title": "Robot logs into traceable evidence",
+      "outcome": "Built a compiler that reconciles fragmented robot and controller logs into one replayable timeline, with each observation traceable to its source.",
+      "mechanism": "VDA 5050/MQTT, OPC UA, SICK scan3 UDP and MCAP/rosbag2; datagram reassembly and clock alignment.",
+      "evidence": "Private implementation. The ROSCon India 2025 talk explains the AMR/AGV evidence architecture."
+    }
   },
   {
     "id": "verification-engine",
@@ -455,7 +491,13 @@
         "Related ROSCon India talk",
         "https://www.youtube.com/watch?v=8RZy6ztm5Wg"
       ]
-    ]
+    ],
+    "review": {
+      "title": "Geometry-backed verification",
+      "outcome": "Built an engine that checks recorded machine behaviour against site geometry and traces each finding to its observations.",
+      "mechanism": "Point-in-polygon and clearance queries, bounded temporal alignment and evidence-gated interlock validators.",
+      "evidence": "Private implementation. PASS, FAIL or NOT_VERIFIABLE findings; engineering analysis, not certification."
+    }
   },
   {
     "id": "visual-driving",
@@ -526,7 +568,13 @@
     "boundary": "CARLA simulation work with separate private MPCC, modified PPO/SAC and attention-encoder extensions. The related physical golf-cart case study covers the vehicle deployment.",
     "links": [],
     "relatedId": "golf-cart",
-    "relatedLabel": "Physical golf-cart deployment"
+    "relatedLabel": "Physical golf-cart deployment",
+    "review": {
+      "title": "Learning to drive from vision",
+      "outcome": "Built expert-data collection and visual imitation learning, then reused the learned features in continuous-control training.",
+      "mechanism": "CARLA environments, image and vehicle-state fusion, actor–critic training and checkpoint recovery.",
+      "evidence": "Public simulation work; physical deployment is documented separately in the golf-cart project."
+    }
   },
   {
     "id": "personal-os",
@@ -587,7 +635,13 @@
     "noteTitle": "Latency is a sequence of boundaries.",
     "note": "The time before useful text appears includes opening the input device, receiving the first real samples, accumulating context and scheduling inference. I separated those stages so a slow device open does not disappear inside a single transcription-time number.",
     "boundary": "Actively developed native application. Hardware-dependent capture and cross-application actions have their own device-validation requirements.",
-    "links": []
+    "links": [],
+    "review": {
+      "title": "Local speech & working memory",
+      "outcome": "Built a native macOS application for recording, transcribing and retrieving working context locally.",
+      "mechanism": "AudioQueue and ScreenCaptureKit capture, 20 ms PCM input, bounded model workers and SQLite-backed retrieval.",
+      "evidence": "Private native application. Device-dependent capture and dictation require separate validation."
+    }
   },
   {
     "id": "private-compute",
@@ -640,6 +694,12 @@
     "noteTitle": "Session authority is its own system.",
     "note": "A remote-display stream solves one part of remote compute. This prototype explores the surrounding lifecycle: which host is available, who has an invitation, when that invitation expires, and what happens after revocation.",
     "boundary": "A validation MVP around an existing streaming system. It does not implement a new display protocol or claim enterprise security qualification.",
-    "links": []
+    "links": [],
+    "review": {
+      "title": "Bounded access to private compute",
+      "outcome": "Built a prototype for granting temporary workstation access with explicit session ownership and revocation.",
+      "mechanism": "Host heartbeats, expiring invitations and connect, disconnect and revoke transitions around existing streaming endpoints.",
+      "evidence": "Private validation prototype; no new display protocol or enterprise security qualification is claimed."
+    }
   }
 ]

@@ -9,8 +9,8 @@ const base='https://kaustubhkr.github.io/';
 const root=resolve(import.meta.dirname,'../dist');
 const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
 const textPaths=['','index.html','full-context.html','llms.txt','llms-full.txt','robots.txt','sitemap.xml'];
-async function verify(path,type,agent='portfolio-release-check'){
-  const response=await fetch(base+path,{headers:{'User-Agent':agent,'Cache-Control':'no-cache'},signal:AbortSignal.timeout(15000)});
+async function verify(path,type,agent='portfolio-release-check',host=base){
+  const response=await fetch(host+path,{headers:{'User-Agent':agent,'Cache-Control':'no-cache'},signal:AbortSignal.timeout(15000)});
   assert.equal(response.status,200,`${path}: HTTP ${response.status}`);
   assert(response.headers.get('content-type')?.includes(type),`${path}: incorrect content type`);
   assert(!/noindex|nofollow|none/i.test(response.headers.get('x-robots-tag')||''),`${path}: restrictive crawler header`);
@@ -21,6 +21,7 @@ async function check(){
   const results=await Promise.allSettled(textPaths.map(path=>verify(path,(!path||path.endsWith('.html'))?'text/html':path.endsWith('.xml')?'xml':'text/plain')));
   const failed=results.filter(r=>r.status==='rejected');
   if(failed.length)throw new AggregateError(failed.map(r=>r.reason),'Live text checks failed');
+  await verify('llms-full.txt','text/plain','portfolio-release-check','https://raw.githubusercontent.com/kaustubhkr/kaustubhkr.github.io/main/');
   // This checks that these UA strings aren't blocked. It is not a claim that
   // the vendors have indexed the site or fetched it from their own networks.
   for(const agent of ['OAI-SearchBot','ChatGPT-User','Claude-User','Claude-SearchBot'])await verify('llms-full.txt','text/plain',agent);

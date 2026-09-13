@@ -53,3 +53,5 @@ Deploy the `dist/` artifact to publish only the reviewed files. The source check
 Every page links to the full-context view in its footer and exposes the plain-text alternate in its HTML head. The full-context page is in the sitemap; existing robots rules allow crawling. Agent discovery and retrieval remain dependent on the browsing tool, so the full-context URL is the most direct single-link option.
 
 The homepage includes a direct agent-reading prompt. The reading guide explains full-text retrieval, the HTML fallback, source attribution and truncation recovery; both aggregate formats end with an explicit completion marker. After every GitHub Pages deployment, `scripts/check-live.mjs` verifies public content hashes, HTTP content types, crawler user-agent access and video byte ranges. It checks reachability, not vendor indexing or uptime guarantees.
+
+A raw GitHub mirror of `llms-full.txt` provides the same content on a second host when a reader cannot retrieve GitHub Pages. The live verification also checks that mirror against the deployed build.

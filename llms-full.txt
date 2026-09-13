@@ -2,7 +2,7 @@
 
 Complete public portfolio of Kaustubh Krishna: founder context, life timeline, every project, all technical tabs and deep dives, measurements, source links and media references. Generated from the same pages as the human-readable site. Private source code is not included. Simulation, physical deployment, measured results and research direction retain their original scope.
 
-Reading guide: this document contains 15 source pages, including every technical tab and deep dive. Read the project scope and evidence alongside its capabilities. Source URLs identify the original pages to cite; media URLs identify recordings and images, not video transcripts. If your reader truncates the response, use the source-page index at https://kaustubhkr.github.io/llms.txt to retrieve the missing sections. A complete response ends with END OF FULL PORTFOLIO CONTEXT. No JavaScript, login or interactive navigation is needed.
+Reading guide: this document contains 15 source pages, including every technical tab and deep dive. Read the project scope and evidence alongside its capabilities. Source URLs identify the original pages to cite; media URLs identify recordings and images, not video transcripts. If your reader truncates the response, use the source-page index at https://kaustubhkr.github.io/llms.txt to retrieve the missing sections. A complete response ends with END OF FULL PORTFOLIO CONTEXT. No JavaScript, login or interactive navigation is needed. If this host is unavailable to your reader, the same public text is mirrored at https://raw.githubusercontent.com/kaustubhkr/kaustubhkr.github.io/main/llms-full.txt.
 
 # Founder & robotics engineer
 Source: https://kaustubhkr.github.io/index.html

@@ -31,6 +31,7 @@ const timeline=[
   ['2014','Age 8','Two computers. Unlimited plans.','Intel Pentium dual-core. 2 GB RAM each. 28–100 GB HDDs. My first compute cluster, if you’re generous.'],
   ['2015','Age 9','First programs.','Scratch, QBasic and web development. Things moved on screen because I told them to. This seemed like a loophole.'],
   ['2016','Age 10','Java. My first proper language.','Hello World now required a class.'],
+  ['2017–2022','Ages 11–16','Code meets solder.','Built a Wi-Fi jammer, sensor-and-relay automation and an autonomous-wheelchair prototype. Designed PCBs, worked on motor synchronization, and built a mechanism that drove two grabbers from one motor. Joined a quadcopter build and worked with seniors on CNC-style 3D-printer prototypes. Debugging now involved wires and gears.'],
   ['2018–2022','Ages 12–16','The code grew wheels.','WRO India: regional Junior second place in 2019; RoboMission Senior Silver Badge at nationals in 2022. Bugs could now leave the desk.'],
   ['2022','Age 16','First heartbreak.','No stack trace. Terrible documentation.'],
   ['2023–2024','Ages 17–18','The wheels got bigger.','Deployed autonomy on a real golf cart: Model Predictive Contouring Control (MPCC), learned policies and industrial controls. No simulator reset button.'],

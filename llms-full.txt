@@ -256,6 +256,11 @@ Scratch, QBasic and web development. Things moved on screen because I told them 
 ### Java. My first proper language.
 Hello World now required a class.
 
+2017–2022 Ages 11–16
+
+### Code meets solder.
+Built a Wi-Fi jammer, sensor-and-relay automation and an autonomous-wheelchair prototype. Designed PCBs, worked on motor synchronization, and built a mechanism that drove two grabbers from one motor. Joined a quadcopter build and worked with seniors on CNC-style 3D-printer prototypes. Debugging now involved wires and gears.
+
 2018–2022 Ages 12–16
 
 ### The code grew wheels.
